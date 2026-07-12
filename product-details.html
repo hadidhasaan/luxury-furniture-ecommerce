@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXORA — Product Details</title>
+  <meta name="description" content="NEXORA product details — premium furniture crafted for modern living." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/search.css" />
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       ATELIER BAR — signature announcement strip
+  ====================================================== -->
+  <div class="atelier-bar" id="atelierBar">
+    <div class="atelier-track" id="atelierTrack">
+      <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+      <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+      <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       PREMIUM NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+<!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav-link" data-nav>Home</a>
+        <a href="shop.html" class="nav-link" data-nav>Shop</a>
+        <a href="collections.html" class="nav-link" data-nav>Collections</a>
+        <a href="journal.html" class="nav-link" data-nav>Journal</a>
+        <a href="about.html" class="nav-link" data-nav>About</a>
+        <a href="contact.html" class="nav-link" data-nav>Contact</a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+
+      <div class="nav-utility">
+
+        <div class="nav-search" id="navSearch">
+          <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="10.5" cy="10.5" r="6.5"/>
+              <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+            </svg>
+          </button>
+          <form class="nav-search-form" id="navSearchForm" role="search">
+            <input type="text" placeholder="Search pieces, materials, rooms…" aria-label="Search" id="navSearchInput" />
+            <button type="submit" aria-label="Submit search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="13 6 19 12 13 18"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <button class="nav-icon-btn nav-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="3.4"/>
+            <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+          </svg>
+          <span class="nav-count" id="wishlistCount">0</span>
+        </a>
+
+        <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+            <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+          </svg>
+          <span class="nav-count nav-count--accent" id="cartCount">0</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-links" aria-label="Mobile primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-tagline">Designed for Modern Living</p>
+      </div>
+    </div>
+    <div class="mobile-menu-scrim" id="mobileScrim"></div>
+  </header>
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+  <main id="main" class="pdp-root">
+
+    <!-- Breadcrumb -->
+    <nav class="pdp-breadcrumb" aria-label="Breadcrumb">
+      <ol class="pdp-breadcrumb__list">
+        <li><a href="index.html" aria-label="Home">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="shop.html" aria-label="Shop">Shop</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page">Sable Platform Bed</li>
+      </ol>
+    </nav>
+
+    <!-- HERO + INFO -->
+    <section class="pdp-top" aria-label="Product details">
+      <div class="pdp-top__inner">
+
+        <!-- Gallery -->
+        <div class="pdp-gallery" data-pdp-gallery data-reveal="fade">
+          <div class="pdp-gallery__main">
+            <div class="pdp-gallery__frame" aria-label="Image zoom area" data-zoom-area>
+              <div class="pdp-skeleton pdp-skeleton--hero" data-skeleton-main aria-hidden="true"></div>
+              <img
+                class="pdp-gallery__img"
+                data-main-img
+                src="images/bedroom-furniture.jpg"
+                alt="Sable Platform Bed — main image"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="pdp-gallery__shine" aria-hidden="true"></div>
+            </div>
+
+            <button class="pdp-gallery__zoomHint" type="button" aria-label="Zoom hint" disabled>Move to zoom</button>
+          </div>
+
+          <div class="pdp-gallery__thumbs" role="list" aria-label="Product images">
+            <button class="pdp-thumb is-active" type="button" role="listitem" data-thumb-index="0" aria-label="Image 1">
+              <img src="images/bedroom-furniture.jpg" alt="Thumbnail 1" loading="lazy" decoding="async" />
+            </button>
+            <button class="pdp-thumb" type="button" role="listitem" data-thumb-index="1" aria-label="Image 2">
+              <img src="images/dining-table.jpg" alt="Thumbnail 2" loading="lazy" decoding="async" />
+            </button>
+            <button class="pdp-thumb" type="button" role="listitem" data-thumb-index="2" aria-label="Image 3">
+              <img src="images/Dining-sofa.jpg" alt="Thumbnail 3" loading="lazy" decoding="async" />
+            </button>
+            <button class="pdp-thumb" type="button" role="listitem" data-thumb-index="3" aria-label="Image 4">
+              <img src="images/chairs-collection.jpg" alt="Thumbnail 4" loading="lazy" decoding="async" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Info panel -->
+        <aside class="pdp-info" aria-label="Purchase information">
+          <div class="pdp-info__glass" aria-live="polite" data-reveal="fade">
+
+            <div class="pdp-info__top">
+              <p class="pdp-info__category" aria-label="Category">
+                <span class="pdp-badge">Beds</span>
+              </p>
+              <h1 class="pdp-info__title">Sable Platform Bed</h1>
+
+              <div class="pdp-info__priceRow" aria-label="Pricing">
+                <span class="pdp-price" data-price>$1,899</span>
+                <span class="pdp-oldPrice" aria-label="Old price">$2,149</span>
+              </div>
+
+              <div class="pdp-rating" aria-label="Customer rating" role="group">
+                <div class="pdp-rating__stars" aria-hidden="true">
+                  <span class="star is-filled">★</span>
+                  <span class="star is-filled">★</span>
+                  <span class="star is-filled">★</span>
+                  <span class="star is-filled">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="pdp-rating__meta">4.0 <span class="pdp-rating__count">(201 reviews)</span></span>
+              </div>
+
+              <div class="pdp-stock" role="status" aria-label="Stock status">
+                <span class="pdp-stock__dot" aria-hidden="true"></span>
+                <span class="pdp-stock__text">In stock — ships in 2–4 business days</span>
+              </div>
+            </div>
+
+            <p class="pdp-info__desc">
+              Low-profile elegance with couture comfort. Crafted for quiet mornings, balanced proportions, and lasting, everyday luxury.
+            </p>
+
+            <div class="pdp-info__divider" aria-hidden="true"></div>
+
+            <div class="pdp-info__options">
+              <label class="pdp-qty" aria-label="Quantity">
+                <span class="pdp-qty__label">Quantity</span>
+                <div class="pdp-qty__control" data-qty-control>
+                  <button class="pdp-qty__btn" type="button" data-qty-decrease aria-label="Decrease quantity">−</button>
+                  <input class="pdp-qty__input" data-qty-input type="number" min="1" step="1" value="1" aria-label="Quantity input" />
+                  <button class="pdp-qty__btn" type="button" data-qty-increase aria-label="Increase quantity">+</button>
+                </div>
+              </label>
+
+              <div class="pdp-info__actions" role="group" aria-label="Purchase actions">
+                <button class="pdp-btn pdp-btn--primary" type="button" data-add-to-cart>
+                  <span>Add to Cart</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+
+                <button class="pdp-btn pdp-btn--ghost" type="button" data-add-to-wishlist aria-label="Add to wishlist">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                  </svg>
+                  <span>Wishlist</span>
+                </button>
+              </div>
+
+              <div class="pdp-info__micro" aria-label="Service highlights">
+                <div class="pdp-micro">
+                  <span class="pdp-micro__ico" aria-hidden="true">⟡</span>
+                  <span class="pdp-micro__text"><strong>White-glove delivery</strong><em> over $1,200</em></span>
+                </div>
+                <div class="pdp-micro">
+                  <span class="pdp-micro__ico" aria-hidden="true">⟡</span>
+                  <span class="pdp-micro__text"><strong>2-Year Warranty</strong><em> crafted to last</em></span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="pdp-features" aria-label="Product features">
+      <div class="pdp-section__inner">
+        <header class="pdp-section__header" data-reveal="fade">
+          <p class="pdp-kicker">FEATURES</p>
+          <h2 class="pdp-title">Designed with material intelligence</h2>
+          <p class="pdp-subtitle">Every surface, measurement, and finish is tuned for comfort and durability.</p>
+        </header>
+
+        <div class="pdp-features__grid" role="list">
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">✦</span>
+            <h3 class="pdp-iconCard__title">Premium Materials</h3>
+            <p class="pdp-iconCard__desc">Kiln-dried timber core with hand-finished edges and softly sealed hardware.</p>
+          </article>
+
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">⧉</span>
+            <h3 class="pdp-iconCard__title">Dimensions</h3>
+            <p class="pdp-iconCard__desc">Platform profile built for balanced support and effortless styling.</p>
+          </article>
+
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">◈</span>
+            <h3 class="pdp-iconCard__title">Color Options</h3>
+            <p class="pdp-iconCard__desc">Sable Sand, Graphite Smoke, and Warm Linen for editorial versatility.</p>
+          </article>
+
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">⌁</span>
+            <h3 class="pdp-iconCard__title">Warranty</h3>
+            <p class="pdp-iconCard__desc">Two years of comprehensive coverage—confidence in every detail.</p>
+          </article>
+
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">⇢</span>
+            <h3 class="pdp-iconCard__title">Delivery</h3>
+            <p class="pdp-iconCard__desc">White-glove handling with real-time scheduling and careful placement.</p>
+          </article>
+
+          <article class="pdp-iconCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="pdp-iconCard__icon" aria-hidden="true">⟡</span>
+            <h3 class="pdp-iconCard__title">Crafted to Feel</h3>
+            <p class="pdp-iconCard__desc">Soft-touch finishes designed for daily contact and long-term beauty.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Tabs -->
+    <section class="pdp-tabs" aria-label="Product description tabs">
+      <div class="pdp-section__inner">
+        <div class="pdp-tabs__wrap" data-reveal="fade">
+          <div class="pdp-tabs__row" role="tablist" aria-label="Description tabs">
+            <button class="pdp-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-description" data-tab="description" tabindex="0">Description</button>
+            <button class="pdp-tab" type="button" role="tab" aria-selected="false" aria-controls="tab-specifications" data-tab="specifications" tabindex="-1">Specifications</button>
+            <button class="pdp-tab" type="button" role="tab" aria-selected="false" aria-controls="tab-care" data-tab="care" tabindex="-1">Care Instructions</button>
+            <button class="pdp-tab" type="button" role="tab" aria-selected="false" aria-controls="tab-shipping" data-tab="shipping" tabindex="-1">Shipping &amp; Returns</button>
+          </div>
+
+          <div class="pdp-tabs__content" aria-label="Tab panels">
+
+            <div class="pdp-tabPanel is-active" id="tab-description" role="tabpanel" aria-label="Description" data-tab-panel="description">
+              <h3 class="pdp-panelTitle">A calm centerpiece for modern living</h3>
+              <p class="pdp-panelText">
+                Sable Platform Bed blends understated geometry with premium finishing—crafted to elevate your space without overpowering it.
+                The platform silhouette supports deep, restorative comfort with a refined, low-profile presence.
+              </p>
+            </div>
+
+            <div class="pdp-tabPanel" id="tab-specifications" role="tabpanel" aria-label="Specifications" data-tab-panel="specifications">
+              <h3 class="pdp-panelTitle">Precision-built for everyday structure</h3>
+              <p class="pdp-panelText">
+                Thoughtfully engineered for quiet stability, with premium materials and clean joinery designed for long-lasting performance.
+              </p>
+              <div class="pdp-panelNote" role="note">Refer to the interactive table below for full dimensional details.</div>
+            </div>
+
+            <div class="pdp-tabPanel" id="tab-care" role="tabpanel" aria-label="Care instructions" data-tab-panel="care">
+              <h3 class="pdp-panelTitle">Care that keeps the finish immaculate</h3>
+              <ul class="pdp-bullets">
+                <li>Dust with a soft, dry cloth; avoid harsh abrasives.</li>
+                <li>Wipe spills immediately with a lightly damp cloth.</li>
+                <li>Use protective pads where needed to prevent scuffing.</li>
+                <li>Keep away from direct prolonged sunlight when possible.</li>
+              </ul>
+            </div>
+
+            <div class="pdp-tabPanel" id="tab-shipping" role="tabpanel" aria-label="Shipping and returns" data-tab-panel="shipping">
+              <h3 class="pdp-panelTitle">Delivery with concierge-level care</h3>
+              <p class="pdp-panelText">
+                Scheduled, white-glove delivery includes careful handling and placement. Returns are supported within the eligible window for your region.
+              </p>
+              <div class="pdp-panelGrid" role="list">
+                <div class="pdp-panelCell" role="listitem"><strong>Delivery:</strong> 2–4 business days</div>
+                <div class="pdp-panelCell" role="listitem"><strong>Returns:</strong> 30 days</div>
+                <div class="pdp-panelCell" role="listitem"><strong>Assembly:</strong> Included</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Specs table -->
+    <section class="pdp-specs" aria-label="Product specifications table">
+      <div class="pdp-section__inner">
+        <header class="pdp-section__header pdp-section__header--tight" data-reveal="fade">
+          <p class="pdp-kicker">DETAILS</p>
+          <h2 class="pdp-title">Interactive specification matrix</h2>
+          <p class="pdp-subtitle">Tap a row for quick highlight. Designed for clarity, not clutter.</p>
+        </header>
+
+        <div class="pdp-tableWrap" tabindex="0" aria-label="Specifications table" data-reveal="fade">
+          <div class="pdp-table__rowHdr">
+            <span class="pdp-table__hdrK">Material</span>
+            <span class="pdp-table__hdrV">Platform</span>
+          </div>
+
+          <table class="pdp-table" role="table" aria-label="Specifications">
+            <tbody>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Material</th>
+                <td data-spec-value>Solid Timber + Upholstered Top</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Width</th>
+                <td data-spec-value>61 in</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Height</th>
+                <td data-spec-value>12 in</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Depth</th>
+                <td data-spec-value>86 in</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Weight</th>
+                <td data-spec-value>92 lbs</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Assembly</th>
+                <td data-spec-value>Includes tools + guided steps</td>
+              </tr>
+              <tr tabindex="0" role="row" data-spec-row>
+                <th scope="row">Country of Origin</th>
+                <td data-spec-value>United States</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="pdp-table__hint" aria-live="polite">Tip: Use Tab + Enter to highlight rows.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="pdp-reviews" aria-label="Customer reviews">
+      <div class="pdp-section__inner">
+        <header class="pdp-section__header pdp-section__header--tight" data-reveal="fade">
+          <p class="pdp-kicker">REVIEWS</p>
+          <h2 class="pdp-title">Loved for its quiet comfort</h2>
+          <p class="pdp-subtitle">Filter by rating and explore what customers notice first.</p>
+        </header>
+
+        <div class="pdp-reviews__grid">
+          <div class="pdp-reviews__summary" aria-label="Overall rating summary">
+            <div class="pdp-reviewSummary__card" data-reveal="fade">
+              <div class="pdp-reviewSummary__score" aria-label="Overall rating">4.0</div>
+              <div class="pdp-reviewSummary__stars" aria-hidden="true">
+                <span class="star is-filled">★</span>
+                <span class="star is-filled">★</span>
+                <span class="star is-filled">★</span>
+                <span class="star is-filled">★</span>
+                <span class="star">★</span>
+              </div>
+              <div class="pdp-reviewSummary__count">201 verified reviews</div>
+
+              <div class="pdp-reviewsFilter" role="group" aria-label="Filter by rating">
+                <button class="pdp-filterBtn is-active" type="button" data-rating-filter="all">All</button>
+                <button class="pdp-filterBtn" type="button" data-rating-filter="5">5 Stars</button>
+                <button class="pdp-filterBtn" type="button" data-rating-filter="4">4 Stars</button>
+                <button class="pdp-filterBtn" type="button" data-rating-filter="3">3 Stars</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pdp-reviews__list" aria-label="Review list">
+            <div class="pdp-reviewCard pdp-skeletonCard" data-review-card aria-hidden="true" style="display:none;"></div>
+
+            <article class="pdp-reviewCard" data-review data-rating="5" tabindex="0" data-reveal="fade">
+              <div class="pdp-reviewCard__top">
+                <div class="pdp-reviewCard__person">
+                  <div class="pdp-avatar" aria-hidden="true">S</div>
+                  <div>
+                    <div class="pdp-reviewCard__name">Sophie M.</div>
+                    <div class="pdp-reviewCard__meta">Verified Buyer</div>
+                  </div>
+                </div>
+                <div class="pdp-reviewCard__stars" aria-label="5 out of 5 stars" role="img">
+                  <span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span>
+                </div>
+              </div>
+              <p class="pdp-reviewCard__date">Mar 18, 2026</p>
+              <p class="pdp-reviewCard__text">“The finish is impeccable—looks like a boutique showroom piece. Assembly was smooth and the bed feels incredibly solid.”</p>
+            </article>
+
+            <article class="pdp-reviewCard" data-review data-rating="4" tabindex="0" data-reveal="fade">
+              <div class="pdp-reviewCard__top">
+                <div class="pdp-reviewCard__person">
+                  <div class="pdp-avatar" aria-hidden="true"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=96&q=80" alt="" loading="lazy"/></div>
+                  <div>
+                    <div class="pdp-reviewCard__name">Leila H.</div>
+                    <div class="pdp-reviewCard__meta">Verified Buyer</div>
+                  </div>
+                </div>
+                <div class="pdp-reviewCard__stars" aria-label="4 out of 5 stars" role="img">
+                  <span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star">★</span>
+                </div>
+              </div>
+              <p class="pdp-reviewCard__date">Jan 09, 2026</p>
+              <p class="pdp-reviewCard__text">“Quiet and comfortable. The color tone is exactly what we hoped for—warm and modern.”</p>
+            </article>
+
+            <article class="pdp-reviewCard" data-review data-rating="3" tabindex="0" data-reveal="fade">
+              <div class="pdp-reviewCard__top">
+                <div class="pdp-reviewCard__person">
+                  <div class="pdp-avatar" aria-hidden="true">A</div>
+                  <div>
+                    <div class="pdp-reviewCard__name">Adam T.</div>
+                    <div class="pdp-reviewCard__meta">Verified Buyer</div>
+                  </div>
+                </div>
+                <div class="pdp-reviewCard__stars" aria-label="3 out of 5 stars" role="img">
+                  <span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star">★</span><span class="star">★</span>
+                </div>
+              </div>
+              <p class="pdp-reviewCard__date">Nov 22, 2025</p>
+              <p class="pdp-reviewCard__text">“Great overall look. Delivery was slightly delayed, but customer support handled it professionally.”</p>
+            </article>
+
+            <article class="pdp-reviewCard" data-review data-rating="4" tabindex="0" data-reveal="fade">
+              <div class="pdp-reviewCard__top">
+                <div class="pdp-reviewCard__person">
+                  <div class="pdp-avatar" aria-hidden="true">M</div>
+                  <div>
+                    <div class="pdp-reviewCard__name">Marco R.</div>
+                    <div class="pdp-reviewCard__meta">Verified Buyer</div>
+                  </div>
+                </div>
+                <div class="pdp-reviewCard__stars" aria-label="4 out of 5 stars" role="img">
+                  <span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star is-filled">★</span><span class="star">★</span>
+                </div>
+              </div>
+              <p class="pdp-reviewCard__date">Sep 02, 2025</p>
+              <p class="pdp-reviewCard__text">“Sturdy and beautifully designed. Would recommend if you want modern, low-profile comfort.”</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related products slider -->
+    <section class="pdp-related" aria-label="Related products">
+      <div class="pdp-section__inner">
+        <header class="pdp-section__header" data-reveal="fade">
+          <p class="pdp-kicker">RELATED</p>
+          <h2 class="pdp-title">Pairs beautifully with</h2>
+          <p class="pdp-subtitle">Premium picks designed to complete your space.</p>
+        </header>
+
+        <div class="pdp-related__slider" data-related-slider>
+          <button class="pdp-related__arrow pdp-related__arrow--prev" type="button" aria-label="Scroll related products left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="pdp-related__viewport" tabindex="0" aria-label="Related products viewport">
+            <div class="pdp-related__track" role="list" aria-label="Related products list">
+
+              <article class="pdp-relatedCard" role="listitem" data-related-item data-reveal="fade">
+                <button class="pdp-relatedCard__wishlist" type="button" aria-label="Add related to wishlist" data-wishlist-related>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                  </svg>
+                </button>
+                <div class="pdp-relatedCard__media" aria-hidden="true">
+                  <img src="images/sofa-set.jpg" alt="Related product" loading="lazy" />
+                </div>
+                <div class="pdp-relatedCard__body">
+                  <div class="pdp-relatedCard__meta"><span class="pdp-pill">Sofas</span></div>
+                  <h3 class="pdp-relatedCard__title">Lumen Modular Sofa</h3>
+                  <div class="pdp-relatedCard__price">$3,299</div>
+                  <button class="pdp-relatedCard__add" type="button" data-related-add>Add to Cart</button>
+                </div>
+              </article>
+
+              <article class="pdp-relatedCard" role="listitem" data-related-item data-reveal="fade">
+                <button class="pdp-relatedCard__wishlist" type="button" aria-label="Add related to wishlist" data-wishlist-related>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                  </svg>
+                </button>
+                <div class="pdp-relatedCard__media" aria-hidden="true">
+                  <img src="images/chairs-collection.jpg" alt="Related product" loading="lazy" />
+                </div>
+                <div class="pdp-relatedCard__body">
+                  <div class="pdp-relatedCard__meta"><span class="pdp-pill">Chairs</span></div>
+                  <h3 class="pdp-relatedCard__title">Nexo Lounge Chair</h3>
+                  <div class="pdp-relatedCard__price">$799</div>
+                  <button class="pdp-relatedCard__add" type="button" data-related-add>Add to Cart</button>
+                </div>
+              </article>
+
+              <article class="pdp-relatedCard" role="listitem" data-related-item data-reveal="fade">
+                <button class="pdp-relatedCard__wishlist" type="button" aria-label="Add related to wishlist" data-wishlist-related>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                  </svg>
+                </button>
+                <div class="pdp-relatedCard__media" aria-hidden="true">
+                  <img src="images/dining-table.jpg" alt="Related product" loading="lazy" />
+                </div>
+                <div class="pdp-relatedCard__body">
+                  <div class="pdp-relatedCard__meta"><span class="pdp-pill">Tables</span></div>
+                  <h3 class="pdp-relatedCard__title">Atelier Dining Table</h3>
+                  <div class="pdp-relatedCard__price">$1,299</div>
+                  <button class="pdp-relatedCard__add" type="button" data-related-add>Add to Cart</button>
+                </div>
+              </article>
+
+              <article class="pdp-relatedCard" role="listitem" data-related-item data-reveal="fade">
+                <button class="pdp-relatedCard__wishlist" type="button" aria-label="Add related to wishlist" data-wishlist-related>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                  </svg>
+                </button>
+                <div class="pdp-relatedCard__media" aria-hidden="true">
+                  <img src="images/bedroom-furniture.jpg" alt="Related product" loading="lazy" />
+                </div>
+                <div class="pdp-relatedCard__body">
+                  <div class="pdp-relatedCard__meta"><span class="pdp-pill">Beds</span></div>
+                  <h3 class="pdp-relatedCard__title">Noir Upholstered Bed</h3>
+                  <div class="pdp-relatedCard__price">$2,499</div>
+                  <button class="pdp-relatedCard__add" type="button" data-related-add>Add to Cart</button>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <button class="pdp-related__arrow pdp-related__arrow--next" type="button" aria-label="Scroll related products right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recently viewed -->
+    <section class="pdp-recent" aria-label="Recently viewed">
+      <div class="pdp-section__inner">
+        <header class="pdp-section__header" data-reveal="fade">
+          <p class="pdp-kicker">RECENTLY VIEWED</p>
+          <h2 class="pdp-title">Your tailored shortlist</h2>
+          <p class="pdp-subtitle">Automatically saved in your browser for convenience.</p>
+        </header>
+
+        <div class="pdp-recent__grid" data-recent-grid role="list" aria-label="Recently viewed products">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Purchase Bar -->
+    <div class="pdp-sticky" data-sticky-bar aria-hidden="true">
+      <div class="pdp-sticky__inner">
+        <div class="pdp-sticky__media" aria-hidden="true">
+          <img src="images/bedroom-furniture.jpg" alt="" loading="lazy" data-sticky-img />
+        </div>
+        <div class="pdp-sticky__meta">
+          <div class="pdp-sticky__title" data-sticky-title>Sable Platform Bed</div>
+          <div class="pdp-sticky__price" data-sticky-price>$1,899</div>
+        </div>
+        <button class="pdp-sticky__add" type="button" data-sticky-add aria-label="Add to cart from sticky bar">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Skeletons (for performance demo) -->
+    <div class="pdp-srOnly" aria-live="polite" data-live-region></div>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart-api.js"></script>
+  <script src="assets/js/pdp.js"></script>
+
+<!-- Back To Top Button -->
+<button
+    id="scrollToTopBtn"
+    class="scrollToTopBtn"
+    aria-label="Back to Top"
+    title="Back to Top">
+
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+
+</body>
+</html>

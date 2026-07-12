@@ -1,0 +1,113 @@
+
+/* about section start */
+.contact-section__header{
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+
+
+.contact-section__inner{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* GRID stays same */
+.contact-section__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* optional: make form feel more left premium */
+.contact-section__form{
+  align-items: flex-start;
+}
+
+/* inputs full width left feel */
+.contact-section__form input,
+.contact-section__form textarea{
+  width: 100%;
+}
+
+.contact-section__header{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-section__kicker{
+  color: #c9a46a;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.contact-section__title{
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+.contact-section__subtitle{
+  color: rgba(0,0,0,0.6);
+}
+
+.contact-section__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* FORM */
+.contact-section__form{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-section__form input,
+.contact-section__form textarea{
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  outline: none;
+}
+
+.contact-section__form button{
+  padding: 14px;
+  border: none;
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:4px;
+}
+
+.contact-section__form button:hover{
+  background: #c9a46a;
+  color: #111;
+}
+
+/* INFO */
+.contact-section__info div{
+  margin-bottom: 20px;
+}
+
+.contact-section__info h3{
+  margin-bottom: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .contact-section__grid{
+    grid-template-columns: 1fr;
+  }
+}

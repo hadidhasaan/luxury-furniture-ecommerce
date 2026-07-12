@@ -1,0 +1,416 @@
+/* =====================================================================
+   NEXORA — FEATURED PRODUCTS SLIDER · PREMIUM UPGRADE (ADDITIVE ONLY)
+   ---------------------------------------------------------------------
+   Append this file AFTER style.css (or paste at the end of it).
+   Every rule below is scoped under .products-slider-section so the
+   shared .product-card styles used elsewhere on the site (e.g. shop
+   grid) are left completely untouched. No selectors are removed from
+   the base file, no JS hooks (data-cart, data-wishlist, data-details-*,
+   data-products-reveal) are renamed or restructured.
+===================================================================== */
+
+.products-slider-section{
+  /* Local tokens — do not touch global :root, purely scoped additions */
+  --ps-radius: 26px;
+  --ps-radius-sm: 16px;
+  --ps-glass: rgba(var(--surface-rgb),0.62);
+  --ps-glass-strong: rgba(var(--surface-rgb),0.82);
+  --ps-shadow-rest: 0 30px 80px -55px rgba(var(--ink-rgb),0.35), 0 2px 10px -4px rgba(var(--ink-rgb),0.06);
+  --ps-shadow-hover: 0 50px 110px -50px rgba(var(--ink-rgb),0.45), 0 10px 30px -12px rgba(201,164,106,0.35);
+  --ps-ease-lux: cubic-bezier(.16,1,.3,1);
+}
+
+/* ---------------------------------------------------------------
+   1. HEADER — more air, refined scale
+--------------------------------------------------------------- */
+.products-slider-section{
+  padding: 108px 0 116px;
+}
+.products-slider-section__header{
+  margin-bottom: 48px;
+}
+.products-slider-section__kicker{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.products-slider-section__kicker::before,
+.products-slider-section__kicker::after{
+  content:"";
+  width: 26px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201,164,106,0), rgba(201,164,106,0.85));
+}
+.products-slider-section__kicker::after{
+  background: linear-gradient(90deg, rgba(201,164,106,0.85), rgba(201,164,106,0));
+}
+.products-slider-section__title{
+  font-size: clamp(36px, 4.2vw, 52px);
+}
+.products-slider-section__subtitle{
+  font-size: 16.5px;
+}
+
+/* ---------------------------------------------------------------
+   2. SLIDER FRAME — arrows overlay the viewport, partial next-card
+      peek on desktop, roomier gaps
+--------------------------------------------------------------- */
+.products-slider-section__slider{
+  display: block;               /* overrides the 3-col grid, additive cascade */
+  position: relative;
+}
+.products-slider-section__viewport{
+  width: 100%;
+  border-radius: var(--ps-radius);
+  scroll-behavior: smooth;
+}
+.products-slider-section__track{
+  gap: 28px;
+  padding: 10px 4px 26px;
+  transition: transform .65s var(--ps-ease-lux); /* smooths JS-driven transform changes */
+}
+
+/* Desktop: reveal a sliver of the next card so the slider reads as
+   "there is more" rather than a hard-clipped grid. */
+@media (min-width: 1101px){
+  .products-slider-section__card{
+    flex: 0 0 calc((100% - 3 * 28px) / 4);
+  }
+}
+
+.products-slider-section__arrow{
+  position: absolute;
+  top: 34%;
+  z-index: 6;
+  width: 58px;
+  height: 58px;
+  background: var(--ps-glass-strong);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(var(--surface-rgb),0.6);
+  box-shadow: 0 24px 60px -34px rgba(var(--ink-rgb),0.4);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .35s var(--ps-ease-lux), transform .35s var(--ps-ease-lux),
+              background .35s var(--ease-soft), border-color .35s var(--ease-soft);
+}
+.products-slider-section__arrow--prev{ left: -6px; }
+.products-slider-section__arrow--next{ right: -6px; }
+
+.products-slider-section__slider:hover .products-slider-section__arrow,
+.products-slider-section__arrow:focus-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+.products-slider-section__arrow:hover{
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  transform: translateY(-3px);
+}
+
+/* Touch/coarse pointers can't hover — keep arrows visible & tappable */
+@media (hover: none) and (pointer: coarse){
+  .products-slider-section__arrow{
+    opacity: 1;
+    transform: translateY(0);
+    top: auto;
+    bottom: -66px;
+    width: 46px;
+    height: 46px;
+  }
+  .products-slider-section__arrow--prev{ left: calc(50% - 58px); }
+  .products-slider-section__arrow--next{ right: calc(50% - 58px); }
+  .products-slider-section__track{ padding-bottom: 70px; }
+}
+
+/* ---------------------------------------------------------------
+   3. CARD — glassmorphism, luxury shadow, consistent height,
+      generous internal rhythm
+--------------------------------------------------------------- */
+.products-slider-section .product-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--ps-radius);
+  background: var(--ps-glass);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(var(--surface-rgb),0.55);
+  box-shadow: var(--ps-shadow-rest);
+  transition: transform .55s var(--ps-ease-lux), box-shadow .55s var(--ps-ease-lux),
+              border-color .45s var(--ease-soft), background .45s var(--ease-soft);
+}
+.products-slider-section .product-card::after{
+  /* hairline inner edge — premium "framed" feel, purely decorative */
+  content:"";
+  position:absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(201,164,106,0.14);
+  pointer-events: none;
+}
+
+.products-slider-section .product-card:hover{
+  transform: translateY(-10px);
+  box-shadow: var(--ps-shadow-hover);
+  border-color: rgba(201,164,106,0.6);
+  background: rgba(var(--surface-rgb),0.78);
+}
+
+/* Larger, taller imagery */
+.products-slider-section .product-card__media{
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--ps-radius) var(--ps-radius) 0 0;
+  overflow: hidden;
+}
+.products-slider-section .product-card__media::after{
+  /* soft gradient so overlaid badges/stock text stay legible on any photo */
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(var(--ink-rgb),0) 0%, rgba(var(--ink-rgb),0.28) 100%);
+  opacity: 0;
+  transition: opacity .5s var(--ps-ease-lux);
+  pointer-events: none;
+}
+.products-slider-section .product-card:hover .product-card__media::after{
+  opacity: 1;
+}
+.products-slider-section .product-card__img{
+  transition: transform .9s var(--ps-ease-lux), filter .9s var(--ps-ease-lux);
+}
+.products-slider-section .product-card:hover .product-card__img{
+  transform: scale(1.08);
+  filter: saturate(1.1) contrast(1.03);
+}
+
+.products-slider-section .product-card__body{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 24px 24px;
+}
+.products-slider-section .product-card__actions{
+  margin-top: auto;
+  padding-top: 18px;
+}
+.products-slider-section .product-card__title{
+  font-size: 20px;
+}
+
+/* ---------------------------------------------------------------
+   4. WISHLIST — refined glass button + micro-interaction
+--------------------------------------------------------------- */
+.products-slider-section .product-card__wishlist{
+  top: 16px;
+  right: 16px;
+  background: rgba(var(--surface-rgb),0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(var(--surface-rgb),0.7);
+}
+.products-slider-section .product-card__wishlist:hover{
+  transform: translateY(-2px) scale(1.08);
+  background: var(--gold);
+  color: var(--ink);
+}
+.products-slider-section .product-card__wishlist:active{
+  transform: scale(0.9);
+}
+/* Optional: JS can toggle this class on click to fill the heart */
+.products-slider-section .product-card__wishlist.is-active{
+  color: var(--gold);
+  background: rgba(var(--surface-rgb),0.95);
+}
+.products-slider-section .product-card__wishlist.is-active svg{
+  fill: currentColor;
+  animation: ps-heart-pop .38s var(--ps-ease-lux);
+}
+@keyframes ps-heart-pop{
+  0%{ transform: scale(1); }
+  40%{ transform: scale(1.35); }
+  100%{ transform: scale(1); }
+}
+
+/* ---------------------------------------------------------------
+   5. BADGES — New / Sale (top-left, over the image)
+--------------------------------------------------------------- */
+.products-slider-section .product-card__badges{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.products-slider-section .product-badge{
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.products-slider-section .product-badge--new{
+  background: rgba(var(--ink-rgb),0.82);
+  color: var(--gold-soft);
+  border: 1px solid rgba(201,164,106,0.4);
+}
+.products-slider-section .product-badge--sale{
+  background: rgba(201,164,106,0.92);
+  color: var(--ink);
+  border: 1px solid rgba(201,164,106,0.6);
+}
+
+/* ---------------------------------------------------------------
+   6. STOCK STATUS — bottom-left of image
+--------------------------------------------------------------- */
+.products-slider-section .product-card__stock{
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 4;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.products-slider-section .product-card__stock::before{
+  content:"";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+.products-slider-section .product-card__stock--in{ color: #C9F2D6; }
+.products-slider-section .product-card__stock--low{ color: #F2C9A0; }
+
+/* ---------------------------------------------------------------
+   7. RATING — stars + review count
+--------------------------------------------------------------- */
+.products-slider-section .product-card__rating{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 10px;
+}
+.products-slider-section .product-card__stars{
+  display: inline-flex;
+  gap: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+.products-slider-section .product-card__star{
+  color: rgba(var(--ink-rgb),0.16);
+}
+.products-slider-section .product-card__star.is-filled,
+.products-slider-section .product-card__star.is-half{
+  color: var(--gold);
+}
+.products-slider-section .product-card__reviews{
+  font-size: 12.5px;
+  font-weight: 700;
+  color: rgba(var(--text-rgb),0.62);
+}
+
+/* Was-price strike-through, next to current price on sale items */
+.products-slider-section .product-card__price--was{
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(var(--text-rgb),0.5);
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+
+/* ---------------------------------------------------------------
+   8. CTA ROW — Add to Cart primary, View Details secondary,
+      always reachable (no opacity:0 gate) with a refined reveal
+--------------------------------------------------------------- */
+.products-slider-section .product-card__actions{
+  gap: 10px;
+}
+.products-slider-section .product-card__add{
+  height: 48px;
+  font-size: 11.5px;
+  letter-spacing: .14em;
+  border-radius: 999px;
+}
+.products-slider-section .product-card__details{
+  /* Keep it reachable/visible by default (accessibility), just quieter
+     than Add to Cart; hover/focus still gives it the gold "reveal" */
+  opacity:1;
+  height: 48px;
+  min-width: 44px;
+  padding: 0 14px;
+  transform: translateY(0);
+  border-color: rgba(var(--ink-rgb),0.14);
+}
+.products-slider-section .product-card:hover .product-card__details,
+.products-slider-section .product-card:focus-within .product-card__details{
+  opacity: 1;
+  background: rgba(201,164,106,0.14);
+  border-color: rgba(201,164,106,0.6);
+}
+/* Touch / no-hover devices: because our new selector above
+   (.products-slider-section .product-card__details) is MORE specific
+   than the base stylesheet's accessibility fallback
+   (@media (hover:none){ .product-card__details{opacity:1} }), we must
+   explicitly restate that fallback here at matching specificity, or
+   touch users would lose the "View Details" link entirely. This
+   preserves the base file's intended behavior, it does not change it. */
+@media (hover: none){
+  .products-slider-section .product-card__details{
+    opacity: 1;
+    transform: translateY(0);
+    background: rgba(201,164,106,0.10);
+    border-color: rgba(201,164,106,0.55);
+  }
+}
+
+/* ---------------------------------------------------------------
+   9. RESPONSIVE — tighten peek + spacing per breakpoint
+--------------------------------------------------------------- */
+@media (max-width: 1100px){
+  .products-slider-section{ padding: 80px 0 84px; }
+  .products-slider-section__arrow{ width: 50px; height: 50px; }
+  .products-slider-section .product-card__media{ aspect-ratio: 4/4.4; }
+}
+
+@media (max-width: 560px){
+  .products-slider-section{ padding: 56px 0 64px; }
+  .products-slider-section__header{ margin-bottom: 32px; }
+  .products-slider-section__track{ gap: 16px; padding: 6px 4px 60px; }
+  /* One full, unclipped card per view; no partial peek on mobile */
+  .products-slider-section__card{ flex: 0 0 100% !important; }
+  .products-slider-section .product-card__media{ aspect-ratio: 4/3.4; }
+  .products-slider-section .product-card__body{ padding: 20px 18px 18px; }
+  .products-slider-section .product-card:hover{ transform: none; } /* avoid lift-jump on tap */
+  /* Extra safety net matching the base stylesheet's own <=560px rule:
+     never gate "View Details" behind hover on small screens. */
+  .products-slider-section .product-card__details{ opacity: 1; transform: translateY(0); }
+  .products-slider-section .product-card__actions{ flex-direction: column; align-items: stretch; }
+}
+
+/* ---------------------------------------------------------------
+   10. Reduced motion — respect the base stylesheet's global rule
+--------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  .products-slider-section .product-card,
+  .products-slider-section .product-card__img,
+  .products-slider-section .product-card__details,
+  .products-slider-section__track,
+  .products-slider-section__arrow{
+    transition-duration: 0.001ms !important;
+  }
+}

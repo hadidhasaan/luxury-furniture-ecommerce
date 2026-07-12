@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXORA — Cart</title>
+  <meta name="description" content="NEXORA cart — premium furniture crafted for modern living." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/search.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+
+  <div class="atelier-bar" id="atelierBar">
+    <div class="atelier-track" id="atelierTrack">
+      <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+      <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+      <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+
+<!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav-link" data-nav>Home</a>
+        <a href="shop.html" class="nav-link" data-nav>Shop</a>
+        <a href="collections.html" class="nav-link" data-nav>Collections</a>
+        <a href="journal.html" class="nav-link" data-nav>Journal</a>
+        <a href="about.html" class="nav-link" data-nav>About</a>
+        <a href="contact.html" class="nav-link" data-nav>Contact</a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+
+      <div class="nav-utility">
+
+       <!-- search start -->
+      <div class="nav-search" id="navSearch">
+      <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+        </svg>
+      </button>
+    </div>
+
+     <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="searchOverlayTitle">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+
+    <div class="search-overlay__panel">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title" id="searchOverlayTitle">Search the catalogue</h2>
+        <button class="search-overlay__close" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--
+        data-search-target is ROOT-RELATIVE on purpose.
+        Whether this page lives at /index.html or
+        /collections/outdoor/lounge-chairs.html, the
+        redirect always resolves to the same place.
+        Change it once here to match your real shop URL.
+      -->
+      <form id="searchOverlayForm" class="search-overlay__form" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search products</label>
+        <div class="search-overlay__field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+          </svg>
+          <input type="text" id="searchOverlayInput" name="search" placeholder="Search sofas, dining tables, lighting…" autocomplete="off">
+          <button type="submit" class="search-overlay__submit" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+      </form>
+
+      <div class="search-overlay__bottom">
+        <p class="search-overlay__fine">Press <kbd>Esc</kbd> to close</p>
+       
+      </div>
+    </div>
+  </div>
+    <!-- search end -->
+
+        <button class="nav-icon-btn nav-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="3.4"/>
+            <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+          </svg>
+          <span class="nav-count" id="wishlistCount">0</span>
+        </a>
+
+        <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+            <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+          </svg>
+          <span class="nav-count nav-count--accent" id="cartCount">0</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-links" aria-label="Mobile primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-tagline">Designed for Modern Living</p>
+      </div>
+    </div>
+
+    <div class="mobile-menu-scrim" id="mobileScrim"></div>
+  </header>
+
+  <main id="main" class="cart-root">
+
+    <nav class="cart-breadcrumb" aria-label="Breadcrumb">
+      <ol class="cart-breadcrumb__list">
+        <li><a href="index.html" aria-label="Home">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page">Cart</li>
+      </ol>
+    </nav>
+
+    <section class="cart-hero" aria-label="Cart header">
+      <div class="cart-hero__inner">
+        <div class="cart-hero__left" data-reveal="fade">
+          <p class="cart-kicker">YOUR SELECTION</p>
+          <h1 class="cart-title">Cart</h1>
+          <p class="cart-subtitle" id="cartSubtitle">Curated pieces ready for checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-layout" aria-label="Cart layout">
+      <div class="cart-layout__inner">
+
+        <div class="cart-items">
+          <div class="cart-items__header">
+            <h2 class="cart-items__title">Items</h2>
+            <div class="cart-items__count" data-cart-items-count aria-label="Cart items count">0</div>
+          </div>
+
+          <div class="cart-items__list" data-cart-items-list aria-label="Cart items list">
+            <!-- Populated by script.js -->
+          </div>
+
+          <div class="cart-empty" data-cart-empty aria-hidden="true" style="display:none;">
+            <div class="cart-empty__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M3.5 8h17l-1.5 13h-14L3.5 8z"/>
+                <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+              </svg>
+            </div>
+            <h3 class="cart-empty__title">Your cart is quiet</h3>
+            <p class="cart-empty__desc">Add pieces you love—your selection will appear here instantly.</p>
+            <a class="cart-empty__btn" href="shop.html" aria-label="Shop">Shop Now</a>
+          </div>
+
+        </div>
+
+        <aside class="cart-summary" aria-label="Cart summary">
+          <div class="cart-summary__card" data-reveal="fade">
+            <h2 class="cart-summary__title">Summary</h2>
+
+            <div class="cart-summary__rows">
+              <div class="cart-summary__row">
+                <span>Subtotal</span>
+                <span data-cart-subtotal>$0</span>
+              </div>
+              <div class="cart-summary__row">
+                <span>Estimated tax</span>
+                <span data-cart-tax>$0</span>
+              </div>
+              <div class="cart-summary__row">
+                <span>Delivery</span>
+                <span data-cart-delivery>Calculated at checkout</span>
+              </div>
+            </div>
+
+            <div class="cart-summary__divider" aria-hidden="true"></div>
+
+            <div class="cart-summary__total">
+              <span>Grand total</span>
+              <span data-cart-total>$0</span>
+            </div>
+
+            <div class="cart-summary__actions">
+              <a class="cart-summary__btn cart-summary__btn--ghost" href="shop.html">Continue Shopping</a>
+              <button class="cart-summary__btn cart-summary__btn--primary" type="button" data-proceed-checkout>
+                Proceed to Checkout
+              </button>
+            </div>
+
+            <p class="cart-summary__fine" aria-live="polite" data-cart-status></p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <link rel="stylesheet" href="assets/css/cart-style.css" />
+  <link rel="stylesheet" href="assets/css/toast-premium.css" />
+
+  <script src="assets/js/toast-premium.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart-api.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+
+<!-- Back To Top Button -->
+<button
+    id="scrollToTopBtn"
+    class="scrollToTopBtn"
+    aria-label="Back to Top"
+    title="Back to Top">
+
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+</body>
+</html>

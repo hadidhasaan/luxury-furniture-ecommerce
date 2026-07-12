@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA — Designed for Modern Living</title>
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="description" content="NEXORA — premium furniture and living goods, designed for modern living.">
+
+<meta property="og:title" content="NEXORA — Designed for Modern Living">
+<meta property="og:description" content="Discover premium furniture and living goods crafted for modern homes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-cover.jpg">
+<meta property="og:url" content="https://your-domain.com">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/products-slider-premium.css">
+<link rel="stylesheet" href="assets/css/toast-premium.css" />
+<link rel="stylesheet" href="assets/css/why_choose_us.css" />
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/search.css" />
+
+
+</head>
+<body>
+
+<!-- =====================================================
+     ATELIER BAR — signature announcement strip
+===================================================== -->
+<div class="atelier-bar" id="atelierBar">
+  <div class="atelier-track" id="atelierTrack">
+    <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+    <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+    <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+  </div>
+</div>
+
+<!-- =====================================================
+     PREMIUM NAVBAR
+===================================================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+
+    <!-- Mobile menu trigger -->
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+   <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+
+    <!-- Primary nav -->
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html" class="nav-link" data-nav>Home</a>
+      <a href="shop.html" class="nav-link" data-nav>Shop</a>
+      <a href="collections.html" class="nav-link" data-nav>Collections</a>
+      <a href="about.html" class="nav-link" data-nav>About</a>
+      <a href="journal.html" class="nav-link" data-nav>Journal</a>
+      <a href="contact.html" class="nav-link" data-nav>Contact</a>
+      
+      <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+    </nav>
+
+    <!-- Utility icons -->
+  <div class="nav-utility">
+
+
+    <!-- search start -->
+      <div class="nav-search" id="navSearch">
+      <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+        </svg>
+      </button>
+    </div>
+
+     <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="searchOverlayTitle">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+
+    <div class="search-overlay__panel">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title" id="searchOverlayTitle">Search the catalogue</h2>
+        <button class="search-overlay__close" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--
+        data-search-target is ROOT-RELATIVE on purpose.
+        Whether this page lives at /index.html or
+        /collections/outdoor/lounge-chairs.html, the
+        redirect always resolves to the same place.
+        Change it once here to match your real shop URL.
+      -->
+      <form id="searchOverlayForm" class="search-overlay__form" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search products</label>
+        <div class="search-overlay__field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+          </svg>
+          <input type="text" id="searchOverlayInput" name="search" placeholder="Search sofas, dining tables, lighting…" autocomplete="off">
+          <button type="submit" class="search-overlay__submit" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+      </form>
+
+      <div class="search-overlay__bottom">
+        <p class="search-overlay__fine">Press <kbd>Esc</kbd> to close</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- Theme toggle panel visibility logic -->
+  <style>
+    [data-theme-toggle-panel].is-open{ display:block !important; }
+    [data-theme-icon]{ width:20px; height:20px; }
+    [data-theme-icon].is-active{ display:block !important; }
+    [data-theme-icon]{ display:none; }
+  </style>
+
+    <!-- search end -->
+
+      <!-- Account -->
+      <button class="nav-icon-btn nav-account" id="accountToggle" aria-label="Account" aria-haspopup="menu" aria-expanded="false" aria-controls="accountDropdown">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="3.4"/>
+          <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+        </svg>
+      </button>
+
+      <!-- =====================================================
+           ACCOUNT DROPDOWN (anchored to icon)
+      ====================================================== -->
+      <div class="account-dropdown" id="accountDropdown" role="menu" aria-hidden="true" aria-labelledby="accountToggle">
+        <div class="account-dropdown__panel" role="presentation" tabindex="-1">
+          <div class="account-dropdown__section account-dropdown__section--profile">
+            <div class="account-dropdown__profileRow">
+              <div class="account-dropdown__avatar" aria-hidden="true">
+                <span class="account-dropdown__avatarGlow"></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <circle cx="12" cy="8" r="3.4"/>
+                  <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+                </svg>
+              </div>
+              <div class="account-dropdown__profileMeta">
+                <div class="account-dropdown__profileTitle">My Account</div>
+                <div class="account-dropdown__profileName" id="accountDropdownName">Atelier Member</div>
+                <div class="account-dropdown__profileEmail" id="accountDropdownEmail">member@nexora.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="account-dropdown__divider" aria-hidden="true"></div>
+
+          <div class="account-dropdown__list" role="presentation">
+            <a class="account-dropdown__item" href="#" role="menuitem" data-account-item="orders">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 10V7a5 5 0 0 1 10 0v3"/>
+                  <path d="M6 10h12v10H6z"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">📦 My Orders</span>
+            </a>
+
+            <a class="account-dropdown__item" href="wishlist.html" role="menuitem" data-account-item="wishlist">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">❤️ Wishlist</span>
+            </a>
+
+            <a class="account-dropdown__item" href="cart.html" role="menuitem" data-account-item="cart">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+                  <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">🛒 Shopping Cart</span>
+            </a>
+
+            <a class="account-dropdown__item" href="#" role="menuitem" data-account-item="settings">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                  <path d="M19.4 15a1.9 1.9 0 0 0 .4 2.1l.1.1-1.4 1.4-.1-.1a1.9 1.9 0 0 0-2.1-.4 1.9 1.9 0 0 0-1.2 1.7V22h-2v-.1a1.9 1.9 0 0 0-1.2-1.7 1.9 1.9 0 0 0-2.1.4l-.1.1-1.4-1.4.1-.1a1.9 1.9 0 0 0 .4-2.1 1.9 1.9 0 0 0-1.7-1.2H2v-2h.1a1.9 1.9 0 0 0 1.7-1.2 1.9 1.9 0 0 0-.4-2.1l-.1-.1 1.4-1.4.1.1a1.9 1.9 0 0 0 2.1.4 1.9 1.9 0 0 0 1.2-1.7V2h2v.1a1.9 1.9 0 0 0 1.2 1.7 1.9 1.9 0 0 0 2.1-.4l.1-.1 1.4 1.4-.1.1a1.9 1.9 0 0 0-.4 2.1 1.9 1.9 0 0 0 1.7 1.2H22v2h-.1a1.9 1.9 0 0 0-1.7 1.2z"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">⚙ Account Settings</span>
+            </a>
+
+            <div class="account-dropdown__divider" aria-hidden="true"></div>
+
+            <div class="account-dropdown__item account-dropdown__item--toggle" data-account-item="darkmode">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">🌙 Dark Mode</span>
+              <button type="button" class="theme-switch" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+                <span class="theme-switch__track" aria-hidden="true">
+                  <span class="theme-switch__thumb"></span>
+                </span>
+              </button>
+            </div>
+
+            <div class="account-dropdown__divider account-dropdown__divider--spacious" aria-hidden="true"></div>
+
+            <a class="account-dropdown__item account-dropdown__item--logout" href="#" role="menuitem" data-account-item="logout">
+              <span class="account-dropdown__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 17l5-5-5-5"/>
+                  <path d="M15 12H3"/>
+                  <path d="M21 3v18"/>
+                </svg>
+              </span>
+              <span class="account-dropdown__top">🚪 Logout</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+
+      <!-- Wishlist -->
+      <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+        </svg>
+        <span class="nav-count" id="wishlistCount">0</span>
+      </a>
+
+      <!-- Cart -->
+      <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+          <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+        </svg>
+        <span class="nav-count nav-count--accent" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile slide-in menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu-links" aria-label="Mobile primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <p class="mobile-menu-tagline">Designed for Modern Living</p>
+    </div>
+  </div>
+  <div class="mobile-menu-scrim" id="mobileScrim"></div>
+</header>
+
+<!-- =====================================================
+     PAGE SECTIONS — built section by section, in order.
+     Next up: Luxury Hero Section (awaiting approval)
+===================================================== -->
+<main id="main">
+<!-- HERO_SECTION (Rebuilt from scratch) -->
+  <!-- ============ HERO SECTION ============ -->
+<section class="lux-hero" id="hero" aria-label="Luxury hero">
+  <div class="lux-hero__bg" aria-hidden="true"></div>
+
+  <div class="lux-hero__inner">
+    <div class="lux-hero__grid">
+
+      <!-- Left content -->
+      <div class="lux-hero__left">
+        <p class="lux-hero__eyebrow">
+          <span class="lux-hero__eyebrowDot" aria-hidden="true"></span>
+          New Autumn Collection
+        </p>
+
+        <h1 class="lux-hero__headline" data-lux-hero-headline>
+          <span class="lux-hero__headlineLine">Furniture that</span>
+          <span class="lux-hero__headlineLine lux-hero__headlineLine--gold">feels like home.</span>
+        </h1>
+
+        <p class="lux-hero__description">
+          Handcrafted in solid oak and premium upholstery, every piece is built to be lived in — and to outlast the trends around it.
+        </p>
+
+        <div class="lux-hero__ctaRow">
+          <a class="lux-hero__btn lux-hero__btn--primary" href="shop.html" aria-label="Shop Now">
+            <span>Shop Now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="lux-hero__btn lux-hero__btn--secondary" href="collections.html" aria-label="Explore collections">
+            <span>Explore Collections</span>
+          </a>
+        </div>
+
+        <ul class="lux-hero__trust">
+          <li>
+            <span class="lux-hero__trustIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21 9.27l-4.5 4.38L17.8 20 12 16.9 6.2 20l1.3-6.35L3 9.27l6.1-1.01L12 2z"/></svg>
+            </span>
+            <span class="lux-hero__trustText">
+              <strong>4.9 / 5 rating</strong>
+              <em>10,000+ happy customers</em>
+            </span>
+          </li>
+          <li>
+            <span class="lux-hero__trustIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16V6a1 1 0 011-1h9v11H3z"/><path d="M13 9h4l4 4v3h-8V9z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+            </span>
+            <span class="lux-hero__trustText">
+              <strong>Free delivery</strong>
+              <em>On orders over $500</em>
+            </span>
+          </li>
+          <li>
+            <span class="lux-hero__trustIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3z"/></svg>
+            </span>
+            <span class="lux-hero__trustText">
+              <strong>10-year warranty</strong>
+              <em>On every frame</em>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right slider -->
+      <div class="lux-hero__right">
+        <div class="lux-hero__slider" id="luxHeroSlider" aria-label="Featured luxury collections">
+          <div class="lux-hero__sliderViewport">
+            <div class="lux-hero__sliderGlow" aria-hidden="true"></div>
+
+            <div class="lux-hero__slides" id="luxHeroSlides" role="list">
+              <article class="lux-hero__slide is-active" data-slide-index="0" role="listitem" aria-label="Slide 1">
+                <img class="lux-hero__slideImg" src="assets/img/hero-sofa.jpg" loading="eager" decoding="async" alt="Luxury modern sofa in warm neutral tones" />
+                <div class="lux-hero__slideOverlay" aria-hidden="true"></div>
+                <div class="lux-hero__slideCaption">
+                  <div class="lux-hero__slideKicker">Sofas</div>
+                  <h2 class="lux-hero__slideTitle">Luxury Modern Sofa</h2>
+                  <p class="lux-hero__slideDesc">Deep-seated comfort in Belgian linen.</p>
+                  <a class="lux-hero__slideBtn" href="shop.html">Shop Now</a>
+                </div>
+              </article>
+
+              <article class="lux-hero__slide" data-slide-index="1" role="listitem" aria-label="Slide 2">
+                <img class="lux-hero__slideImg" src="assets/img/dining-table-dinner-slider.jpg" loading="lazy" decoding="async" alt="Premium dining table with elegant interior styling" />
+                <div class="lux-hero__slideOverlay" aria-hidden="true"></div>
+                <div class="lux-hero__slideCaption">
+                  <div class="lux-hero__slideKicker">Dining</div>
+                  <h2 class="lux-hero__slideTitle">Atelier Dining Table</h2>
+                  <p class="lux-hero__slideDesc">Solid oak, seats six, finished by hand.</p>
+                  <a class="lux-hero__slideBtn" href="shop.html">Shop Now</a>
+                </div>
+              </article>
+
+              <article class="lux-hero__slide" data-slide-index="2" role="listitem" aria-label="Slide 3">
+                <img class="lux-hero__slideImg" src="assets/img/bedroom-furniture.jpg" loading="lazy" decoding="async" alt="Elegant bedroom set with premium textures" />
+                <div class="lux-hero__slideOverlay" aria-hidden="true"></div>
+                <div class="lux-hero__slideCaption">
+                  <div class="lux-hero__slideKicker">Beds</div>
+                  <h2 class="lux-hero__slideTitle">Rest &amp; Refinement Collection</h2>
+                  <p class="lux-hero__slideDesc">Upholstered frames, hotel-grade comfort.</p>
+                  <a class="lux-hero__slideBtn" href="shop.html">Shop Now</a>
+                </div>
+              </article>
+
+              
+            </div>
+
+            <button class="lux-hero__arrow lux-hero__arrow--prev" type="button" id="luxHeroPrev" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="lux-hero__arrow lux-hero__arrow--next" type="button" id="luxHeroNext" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="lux-hero__dots" id="luxHeroDots" role="tablist" aria-label="Slide pagination">
+            <button class="lux-hero__dot is-active" type="button" role="tab" aria-label="Go to slide 1" aria-selected="true" data-dot-index="0">
+              <span class="lux-hero__dotFill"></span>
+            </button>
+            <button class="lux-hero__dot" type="button" role="tab" aria-label="Go to slide 2" aria-selected="false" data-dot-index="1">
+              <span class="lux-hero__dotFill"></span>
+            </button>
+            <button class="lux-hero__dot" type="button" role="tab" aria-label="Go to slide 3" aria-selected="false" data-dot-index="2">
+              <span class="lux-hero__dotFill"></span>
+            </button>
+            <button class="lux-hero__dot" type="button" role="tab" aria-label="Go to slide 4" aria-selected="false" data-dot-index="3">
+              <span class="lux-hero__dotFill"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- CATEGORIES_SECTION -->
+  <section class="categories-section" id="featuredCategories" aria-label="Featured Categories">
+    <div class="categories-section__inner">
+      <header class="categories-section__header">
+        <p class="categories-section__kicker">Collections</p>
+        <h2 class="categories-section__title">Featured Categories</h2>
+        <p class="categories-section__subtitle">Explore our premium furniture collections</p>
+      </header>
+
+      <div class="categories-section__grid" role="list">
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80"
+              alt="Sofa collection"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Sofa Collection</h3>
+            <p class="category-card__desc">Relax in refined comfort with tailored silhouettes.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="assets/img/bedroom-furniture.jpg"
+              alt="Bedroom furniture"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Bedroom Furniture</h3>
+            <p class="category-card__desc">Sleep crafted with premium finishes and calm design.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="assets/img/dining-table.jpg"
+              alt="Dining tables"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Dining Tables</h3>
+            <p class="category-card__desc">Gather around beautifully balanced proportions.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="https://images.unsplash.com/photo-1549187774-b4e9b0445b41?auto=format&fit=crop&w=1200&q=80"
+              alt="Office furniture"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Office Furniture</h3>
+            <p class="category-card__desc">Productivity meets elegance—designed for everyday focus.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="assets/img/chairs-collection.jpg"
+              alt="Chairs collection"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Chairs Collection</h3>
+            <p class="category-card__desc">Comfort-forward seating with refined, modern lines.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=1200&q=80"
+              alt="Home decor"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Home Decor</h3>
+            <p class="category-card__desc">Finishing touches that elevate the entire space.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="assets/img/Dining-sofa.jpg"
+              alt="Home decor"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Dining Sofa</h3>
+            <p class="category-card__desc">Finishing touches that elevate the entire space.</p>
+          </div>
+        </a>
+
+        <a class="category-card" href="shop.html" role="listitem">
+          <div class="category-card__media" aria-hidden="true">
+            <img
+              class="category-card__img"
+              src="assets/img/sofa-set.jpg"
+              alt="Home decor"
+              loading="lazy"
+            />
+            <div class="category-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Sofa</h3>
+            <p class="category-card__desc">Finishing touches that elevate the entire space.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED_PRODUCTS_SECTION (Premium slider) -->
+  <section class="products-slider-section" id="featuredProducts" aria-label="Featured Products">
+    <div class="products-slider-section__inner">
+      <header class="products-slider-section__header">
+        <p class="products-slider-section__kicker">Best Selling Furniture</p>
+        <h2 class="products-slider-section__title">Featured Products</h2>
+        <p class="products-slider-section__subtitle">Explore our premium handcrafted furniture collection</p>
+      </header>
+
+      <div class="products-slider-section__slider" aria-label="Featured products carousel">
+        <button class="products-slider-section__arrow products-slider-section__arrow--prev" type="button" aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <div class="products-slider-section__viewport" tabindex="0" aria-label="Product slider viewport">
+          <div class="products-slider-section__track" role="list">
+
+<!-- Product 1 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Beds" data-products-reveal data-product-id="sable-platform-bed">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--new">New</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/bedroom-furniture.jpg" alt="Sable Platform Bed" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Beds</span></div>
+                <h3 class="product-card__title">Sable Platform Bed</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$1,899</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="sable-platform-bed"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="sable-platform-bed" data-details-product-id="sable-platform-bed">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Beds" data-products-reveal data-product-id="sable-platform-bed-2">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--new">New</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/bedroom-furniture.jpg" alt="Sable Platform Bed" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Beds</span></div>
+                <h3 class="product-card__title">Sable Platform Bed</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$1,899</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="sable-platform-bed-2"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="sable-platform-bed-2" data-details-product-id="sable-platform-bed-2">View Details</a>
+                </div>
+              </div>
+            </article>
+
+<!-- Product 3 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Chairs" data-products-reveal data-product-id="nexo-lounge-chair">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--new">New</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/chairs-collection.jpg" alt="Nexo Lounge Chair" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Chairs</span></div>
+                <h3 class="product-card__title">Nexo Lounge Chair</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$799</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="nexo-lounge-chair"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="nexo-lounge-chair" data-details-product-id="nexo-lounge-chair">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Tables" data-products-reveal data-product-id="atelier-dining-table">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--sale">Save 20%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/dining-table.jpg" alt="Atelier Dining Table" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Tables</span></div>
+                <h3 class="product-card__title">Atelier Dining Table</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$1,299</span>
+                  <span class="product-card__price--was">$1,624</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="atelier-dining-table"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="atelier-dining-table" data-details-product-id="atelier-dining-table">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Sofas" data-products-reveal data-product-id="lumen-modular-sofa">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--sale">Save 20%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/Dining-sofa.jpg" alt="Lumen Modular Sofa" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Sofas</span></div>
+                <h3 class="product-card__title">Lumen Modular Sofa</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$3,299</span>
+                  <span class="product-card__price--was">$4,124</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="lumen-modular-sofa"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="lumen-modular-sofa" data-details-product-id="lumen-modular-sofa">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Beds" data-products-reveal data-product-id="noir-upholstered-bed">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--new">New</span>
+                <span class="product-badge product-badge--sale">Save 15%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/bedroom-furniture.jpg" alt="Noir Upholstered Bed" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Beds</span></div>
+                <h3 class="product-card__title">Noir Upholstered Bed</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$2,499</span>
+                  <span class="product-card__price--was">$2,939</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="noir-upholstered-bed"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="noir-upholstered-bed" data-details-product-id="noir-upholstered-bed">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Chairs" data-products-reveal data-product-id="ember-accent-chair">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--sale">Save 20%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/chairs-collection.jpg" alt="Ember Accent Chair" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Chairs</span></div>
+                <h3 class="product-card__title">Ember Accent Chair</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$1,099</span>
+                  <span class="product-card__price--was">$1,374</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="ember-accent-chair"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="ember-accent-chair" data-details-product-id="ember-accent-chair">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Tables" data-products-reveal data-product-id="cedar-coffee-table">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--sale">Save 20%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/dining-table.jpg" alt="Cedar Coffee Table" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Tables</span></div>
+                <h3 class="product-card__title">Cedar Coffee Table</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$899</span>
+                  <span class="product-card__price--was">$1,124</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="cedar-coffee-table"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="cedar-coffee-table" data-details-product-id="cedar-coffee-table">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 9 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Decor" data-products-reveal data-product-id="arc-vase-stone">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/sofa-set.jpg" alt="Arc Vase — Stone" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Decor</span></div>
+                <h3 class="product-card__title">Arc Vase — Stone</h3>
+                <div class="product-card__price">$219</div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="arc-vase-stone"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="arc-vase-stone" data-details-product-id="arc-vase-stone">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 10 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Decor" data-products-reveal data-product-id="vela-table-lamp">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/bedroom-furniture.jpg" alt="Vela Table Lamp" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Decor</span></div>
+                <h3 class="product-card__title">Vela Table Lamp</h3>
+                <div class="product-card__price">$349</div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="vela-table-lamp"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="vela-table-lamp" data-details-product-id="vela-table-lamp">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 11 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Tables" data-products-reveal data-product-id="atelier-side-table">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--new">New</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/dining-table.jpg" alt="Atelier Side Table" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Tables</span></div>
+                <h3 class="product-card__title">Atelier Side Table</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$649</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="atelier-side-table"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="atelier-side-table" data-details-product-id="atelier-side-table">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 12 -->
+            <article class="product-card products-slider-section__card" role="listitem" data-category="Sofas" data-products-reveal data-product-id="aria-daybed-sofa">
+              <button class="product-card__wishlist" type="button" aria-label="Add to wishlist" data-wishlist>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+                </svg>
+              </button>
+
+              <div class="product-card__badges" aria-hidden="true">
+                <span class="product-badge product-badge--sale">Save 25%</span>
+              </div>
+
+              <div class="product-card__media">
+                <img class="product-card__img" src="assets/img/Dining-sofa.jpg" alt="Aria Daybed Sofa" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <div class="product-card__meta"><span class="product-pill">Sofas</span></div>
+                <h3 class="product-card__title">Aria Daybed Sofa</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price--now">$2,199</span>
+                  <span class="product-card__price--was">$2,932</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="product-card__add" type="button" data-cart data-cart-product-id="aria-daybed-sofa"> Add to Cart </button>
+                  <a class="product-card__details" href="product-details.html" data-details-link="aria-daybed-sofa" data-details-product-id="aria-daybed-sofa">View Details</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="products-slider-section__arrow products-slider-section__arrow--next" type="button" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION_BANNER -->
+  <!-- WHY_CHOOSE_SECTION -->
+  <!-- COLLECTION_BANNER -->
+  <!-- WHY_CHOOSE_SECTION -->
+  <section class="wcu" aria-label="Why Choose Us">
+    <div class="wcu__inner">
+
+      <div class="wcu__intro">
+        <span class="wcu__eyebrow">Why Choose Us</span>
+        <h2 class="wcu__title">Furniture built to<br>outlast the <em>trend cycle</em></h2>
+        <p class="wcu__desc">Every piece we ship is chosen for how it ages — not just how it photographs. Here's what that means for the way we work.</p>
+
+        <div class="wcu__stat">
+          <span class="wcu__stat-number">12,400<span>+</span></span>
+          <span class="wcu__stat-label">Homes furnished since 2010, with pieces still standing strong</span>
+        </div>
+      </div>
+
+      <div class="wcu__grid" role="list">
+
+        <article class="wcu__card" role="listitem" tabindex="0">
+          <span class="wcu__index">01</span>
+          <div class="wcu__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7h11v10H3z"/>
+              <path d="M14 10h4l3 3v4h-7z"/>
+              <path d="M7 20.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3z"/>
+              <path d="M18 20.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3z"/>
+            </svg>
+          </div>
+          <h3 class="wcu__card-title">Free &amp; Fast Delivery</h3>
+          <p class="wcu__card-desc">Real-time tracking and careful handling, so your furniture arrives ready for life.</p>
+        </article>
+
+        <article class="wcu__card" role="listitem" tabindex="0">
+          <span class="wcu__index">02</span>
+          <div class="wcu__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 20h10"/>
+              <path d="M9 20v-6"/>
+              <path d="M15 20v-6"/>
+              <path d="M5 10l7-7 7 7"/>
+              <path d="M7 10v10"/>
+              <path d="M17 10v10"/>
+            </svg>
+          </div>
+          <h3 class="wcu__card-title">Premium Quality</h3>
+          <p class="wcu__card-desc">Refined materials and joinery built for decades, not just a delivery photo.</p>
+        </article>
+
+        <article class="wcu__card" role="listitem" tabindex="0">
+          <span class="wcu__index">03</span>
+          <div class="wcu__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z"/>
+              <path d="M12 8v5l3 2"/>
+              <path d="M9 21h6"/>
+            </svg>
+          </div>
+          <h3 class="wcu__card-title">24/7 Support</h3>
+          <p class="wcu__card-desc">Concierge-level assistance before and after purchase, whenever you need it.</p>
+        </article>
+
+        <article class="wcu__card" role="listitem" tabindex="0">
+          <span class="wcu__index">04</span>
+          <div class="wcu__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/>
+              <path d="M9.2 12l2 2.2 4.6-5"/>
+            </svg>
+          </div>
+          <h3 class="wcu__card-title">Warranty &amp; Guarantee</h3>
+          <p class="wcu__card-desc">Confidence in every detail, backed by real warranty coverage.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="brands" aria-label="Trusted Brands">
+    <div class="brands__inner">
+
+      <header class="brands__header">
+        <p class="brands__kicker">Trusted Worldwide</p>
+        <h2 class="brands__title">In good company with <em>design-led</em> studios</h2>
+        <p class="brands__subtitle">We source and build alongside manufacturing partners and design studios who share one standard: furniture that's made to be lived in, not just looked at.</p>
+      </header>
+
+      <div class="brands__rail">
+
+        <div class="brands__row" aria-hidden="false">
+          <div class="brands__track" role="list">
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Nordic<span>&amp;</span>Co</span><span class="brands__category">Case Goods</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Atelier Form</span><span class="brands__category">Upholstery</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Oakmill</span><span class="brands__category">Solid Wood</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Meridian <span>Studio</span></span><span class="brands__category">Lighting</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Stonewell</span><span class="brands__category">Stone &amp; Marble</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Kira <span>&amp;</span> Home</span><span class="brands__category">Textiles</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Loom House</span><span class="brands__category">Weaving Mill</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Halvard</span><span class="brands__category">Metalwork</span></a>
+
+            <!-- duplicate set — seamless loop -->
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Nordic<span>&amp;</span>Co</span><span class="brands__category">Case Goods</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Atelier Form</span><span class="brands__category">Upholstery</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Oakmill</span><span class="brands__category">Solid Wood</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Meridian <span>Studio</span></span><span class="brands__category">Lighting</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Stonewell</span><span class="brands__category">Stone &amp; Marble</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Kira <span>&amp;</span> Home</span><span class="brands__category">Textiles</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Loom House</span><span class="brands__category">Weaving Mill</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Halvard</span><span class="brands__category">Metalwork</span></a>
+          </div>
+        </div>
+
+        <div class="brands__row brands__row--reverse" aria-hidden="false">
+          <div class="brands__track" role="list">
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Birch <span>&amp;</span> Vale</span><span class="brands__category">Outdoor Living</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Faro Studio</span><span class="brands__category">Modular Seating</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Linden Works</span><span class="brands__category">Joinery</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Marlowe</span><span class="brands__category">Leather Goods</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Solene <span>&amp;</span> Co</span><span class="brands__category">Ceramics</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Ridgeline</span><span class="brands__category">Steel Frame</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Havenwood</span><span class="brands__category">Custom Millwork</span></a>
+            <a class="brands__card" href="#" role="listitem" tabindex="0"><span class="brands__wordmark">Ashgrove Mill</span><span class="brands__category">Natural Fibres</span></a>
+
+            <!-- duplicate set — seamless loop -->
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Birch <span>&amp;</span> Vale</span><span class="brands__category">Outdoor Living</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Faro Studio</span><span class="brands__category">Modular Seating</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Linden Works</span><span class="brands__category">Joinery</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Marlowe</span><span class="brands__category">Leather Goods</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Solene <span>&amp;</span> Co</span><span class="brands__category">Ceramics</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Ridgeline</span><span class="brands__category">Steel Frame</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Havenwood</span><span class="brands__category">Custom Millwork</span></a>
+            <a class="brands__card" href="#" role="listitem" aria-hidden="true" tabindex="-1"><span class="brands__wordmark">Ashgrove Mill</span><span class="brands__category">Natural Fibres</span></a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="brands__footnote">Hover to pause · partner logos shown as placeholders — swap in licensed brand assets when available.</p>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS_SECTION -->
+  <section class="testimonials-section" id="testimonials" aria-label="Testimonials">
+    <div class="testimonials-section__inner">
+      <header class="testimonials-section__header">
+        <p class="testimonials-section__kicker">Testimonials</p>
+        <h2 class="testimonials-section__title">What Our Customers Say</h2>
+        <p class="testimonials-section__subtitle">Real feedback from our happy furniture buyers</p>
+      </header>
+
+      <div class="testimonials-section__grid" role="list">
+        <!-- Card 1 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=96&q=80" alt="" loading="lazy" />
+              </div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Sophie Martinez</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “The craftsmanship is impeccable. Our new sofa looks stunning and feels even better than expected.”
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade" data-reveal-delay="50">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">A</div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Adam Thompson</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="4 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “Premium materials and clean lines. Delivery was smooth, and the dining table instantly upgraded the room.”
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade" data-reveal-delay="100">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=96&q=80" alt="" loading="lazy" />
+              </div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Leila Haddad</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “The bed frame is sturdy, quiet, and beautifully finished. Everything feels thoughtfully designed.”
+          </p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade" data-reveal-delay="150">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">M</div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Marco Rossi</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “We love the modern chair design—comfortable from day one. The detailing is what makes it special.”
+          </p>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade" data-reveal-delay="200">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=96&q=80" alt="" loading="lazy" />
+              </div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Nadia El-Sayed</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="4 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “Beautiful finish and the proportions are spot on. Customer support was also very helpful.”
+          </p>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="testimonial-card" role="listitem" tabindex="0" data-reveal="fade" data-reveal-delay="250">
+          <div class="testimonial-card__top">
+            <div class="testimonial-card__person">
+              <div class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">J</div>
+              <div class="testimonial-card__meta">
+                <p class="testimonial-card__name">Jacob King</p>
+                <p class="testimonial-card__tag">Verified Buyer</p>
+              </div>
+            </div>
+
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+              <span aria-hidden="true" class="star is-filled">★</span>
+            </div>
+          </div>
+
+          <p class="testimonial-card__text">
+            “Our living space feels elevated. The furniture arrived perfectly packed and looks premium throughout.”
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- about section start -->
+  <section class="about-section" aria-label="About NEXORA">
+    <div class="about-section__inner">
+      <div class="about-section__grid">
+
+        <!-- Left editorial content + image -->
+        <div class="about-section__left">
+          <p class="about-section__eyebrow" data-about-reveal="fade">About NEXORA</p>
+
+          <h2 class="about-section__heading" data-about-reveal="fade">
+            Crafting Spaces
+            That Inspire Everyday Living
+          </h2>
+
+          <p class="about-section__paragraph" data-about-reveal="fade">
+            NEXORA is built on premium craftsmanship—timeless furniture designed for modern living.
+            We use sustainable materials with an editorial eye for elegant interiors, so every piece
+            delivers quality over quantity.
+          </p>
+
+          <div class="about-section__heroMedia" data-about-reveal="fade">
+            <div class="about-section__heroFrame" aria-hidden="true"></div>
+
+            <figure class="about-section__imageWrap">
+              <img
+                class="about-section__image"
+                src="assets/img/sofa-set.jpg"
+                alt="Luxury living room with warm lighting and modern premium furniture"
+                loading="lazy"
+              />
+
+              <figcaption class="about-section__imageAccent" aria-hidden="true">
+                <span class="about-section__goldDot"></span>
+                <span class="about-section__goldLine"></span>
+              </figcaption>
+
+              <div class="about-section__experienceCard" aria-hidden="false">
+                <div class="about-section__experienceCardInner">
+                  <div class="about-section__experienceTop">
+                    <span class="about-section__experienceNum" aria-label="15 plus years" data-counter data-target="15">0</span>
+                    <span class="about-section__experiencePlus" aria-hidden="true">+</span>
+                  </div>
+                  <div class="about-section__experienceLabel">Years Experience</div>
+                  <div class="about-section__experienceSub">Handcrafted Furniture Since 2010</div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Right features + statistics + CTA -->
+        <div class="about-section__right">
+          <div class="about-section__featuresGrid" data-about-reveal="fade">
+            <article class="about-section__featureCard" tabindex="0">
+              <span class="about-section__featureIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M7 21h10"/>
+                  <path d="M9 17h6"/>
+                  <path d="M10 3h4l1 3h-6l1-3Z"/>
+                  <path d="M6 6h12v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6Z"/>
+                </svg>
+              </span>
+              <h3 class="about-section__featureTitle">Premium Materials</h3>
+              <p class="about-section__featureDesc">Refined finishes, lasting comfort, and materials chosen for feel and longevity.</p>
+            </article>
+
+            <article class="about-section__featureCard" tabindex="0">
+              <span class="about-section__featureIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 20h16"/>
+                  <path d="M6 16l6-12 6 12"/>
+                  <path d="M9.5 12.5h5"/>
+                </svg>
+              </span>
+              <h3 class="about-section__featureTitle">Timeless Design</h3>
+              <p class="about-section__featureDesc">Minimal forms with editorial balance—beautiful today, and beautifully enduring.</p>
+            </article>
+
+            <article class="about-section__featureCard" tabindex="0">
+              <span class="about-section__featureIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M7 21h10"/>
+                  <path d="M9 21V8a3 3 0 0 1 6 0v13"/>
+                  <path d="M10 10h4"/>
+                  <path d="M12 10v11"/>
+                </svg>
+              </span>
+              <h3 class="about-section__featureTitle">Handcrafted Quality</h3>
+              <p class="about-section__featureDesc">Built by skilled artisans—precision work that shows in every line and seam.</p>
+            </article>
+
+            <article class="about-section__featureCard" tabindex="0">
+              <span class="about-section__featureIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M3 7h13v10H3V7Z"/>
+                  <path d="M16 10h5l-2 7h-3v-7Z"/>
+                  <path d="M7.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+                  <path d="M18.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+                </svg>
+              </span>
+              <h3 class="about-section__featureTitle">Worldwide Delivery</h3>
+              <p class="about-section__featureDesc">White-glove service with careful handling—delivered with premium care.</p>
+            </article>
+          </div>
+
+          <div class="about-section__stats" aria-label="NEXORA statistics">
+            <div class="about-section__statsInner" data-about-reveal="fade">
+              <div class="about-section__stat" role="group" aria-label="Years experience">
+                <span class="about-section__statNum" data-counter data-target="15">0</span>
+                <span class="about-section__statUnit" aria-hidden="true">+</span>
+                <span class="about-section__statLabel">Years Experience</span>
+              </div>
+
+              <div class="about-section__stat" role="group" aria-label="Happy customers">
+                <span class="about-section__statNum" data-counter data-target="25000">0</span>
+                <span class="about-section__statUnit" aria-hidden="true">+</span>
+                <span class="about-section__statLabel">Happy Customers</span>
+              </div>
+
+              <div class="about-section__stat" role="group" aria-label="Luxury products">
+                <span class="about-section__statNum" data-counter data-target="350">0</span>
+                <span class="about-section__statUnit" aria-hidden="true">+</span>
+                <span class="about-section__statLabel">Luxury Products</span>
+              </div>
+
+              <div class="about-section__stat" role="group" aria-label="Customer satisfaction">
+                <span class="about-section__statNum" data-counter data-target="98">0</span>
+                <span class="about-section__statUnit" aria-hidden="true">%</span>
+                <span class="about-section__statLabel">Customer Satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section__cta" data-about-reveal="fade">
+            <p class="about-section__ctaTitle">Create a Home
+              You'll Love Forever</p>
+            <a href="collections.html" class="about-section__ctaBtn" aria-label="Explore Collections">
+              <span>Explore Collections</span>
+              <span class="about-section__ctaArrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- about section end -->
+
+
+  <!-- NEWSLETTER_SECTION -->
+
+  <section class="newsletter-section" aria-label="Newsletter">
+
+    <div class="newsletter-section__inner">
+      <div class="newsletter-section__card">
+        <div class="newsletter-section__decor" aria-hidden="true"></div>
+
+        <p class="newsletter-section__label">STAY INSPIRED</p>
+        <h2 class="newsletter-section__title">Join Our Furniture Community</h2>
+        <p class="newsletter-section__subtitle">Get exclusive offers, new collections, and interior design inspiration delivered to your inbox.</p>
+
+        <form class="newsletter-section__form" action="#" method="post" aria-label="Subscribe to newsletter">
+          <label class="newsletter-section__sr" for="newsletterEmail">Email</label>
+          <div class="newsletter-section__input-wrap">
+            <input
+              id="newsletterEmail"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <button class="newsletter-section__btn" type="submit">
+            <span>Subscribe Now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </button>
+        </form>
+
+        <p class="newsletter-section__fineprint">By subscribing, you agree to receive emails from NEXORA. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS_SECTION -->
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="assets/js/toast-premium.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/account-popover.js"></script>
+<script src="assets/js/cart-api.js"></script>
+<script src="assets/js/append-shop-ux.js"></script>
+
+
+
+<!-- Back To Top Button -->
+<button
+    id="scrollToTopBtn"
+    class="scrollToTopBtn"
+    aria-label="Back to Top"
+    title="Back to Top">
+
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+</body>
+</html>

@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXORA — Designed for Modern Living</title>
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta name="description" content="NEXORA — premium furniture and living goods, designed for modern living." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/shop.css"/>
+  <link rel="stylesheet" href="assets/css/search.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  
+  
+
+  
+</head>
+<body>
+
+  <!-- =====================================================
+       ATELIER BAR
+  ====================================================== -->
+  <div class="atelier-bar" id="atelierBar">
+    <div class="atelier-track" id="atelierTrack">
+      <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+      <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+      <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       PREMIUM NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+<!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav-link" data-nav>Home</a>
+        <a href="shop.html" class="nav-link is-active" data-nav>Shop</a>
+        <a href="collections.html" class="nav-link" data-nav>Collections</a>
+        <a href="journal.html" class="nav-link" data-nav>Journal</a>
+        <a href="about.html" class="nav-link" data-nav>About</a>
+        <a href="contact.html" class="nav-link" data-nav>Contact</a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+
+      <div class="nav-utility">
+
+         <!-- search start -->
+      <div class="nav-search" id="navSearch">
+      <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+        </svg>
+      </button>
+    </div>
+
+     <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="searchOverlayTitle">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+
+    <div class="search-overlay__panel">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title" id="searchOverlayTitle">Search the catalogue</h2>
+        <button class="search-overlay__close" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--
+        data-search-target is ROOT-RELATIVE on purpose.
+        Whether this page lives at /index.html or
+        /collections/outdoor/lounge-chairs.html, the
+        redirect always resolves to the same place.
+        Change it once here to match your real shop URL.
+      -->
+      <form id="searchOverlayForm" class="search-overlay__form" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search products</label>
+        <div class="search-overlay__field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+          </svg>
+          <input type="text" id="searchOverlayInput" name="search" placeholder="Search sofas, dining tables, lighting…" autocomplete="off">
+          <button type="submit" class="search-overlay__submit" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+      </form>
+
+      <div class="search-overlay__bottom">
+        <p class="search-overlay__fine">Press <kbd>Esc</kbd> to close</p>
+       
+      </div>
+    </div>
+  </div>
+    <!-- search end -->
+
+
+        <button class="nav-icon-btn nav-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="3.4"/>
+            <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+          </svg>
+          <span class="nav-count" id="wishlistCount">0</span>
+        </a>
+
+        <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+            <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+          </svg>
+          <span class="nav-count nav-count--accent" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile slide-in menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-links" aria-label="Mobile primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="is-active">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-tagline">Designed for Modern Living</p>
+      </div>
+    </div>
+    <div class="mobile-menu-scrim" id="mobileScrim"></div>
+  </header>
+
+  <!-- =====================================================
+       SEARCH OVERLAY (shared component)
+  ====================================================== -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+    <div class="search-overlay__panel" role="document">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title">Search</h2>
+        <button class="search-overlay__close" type="button" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 6L6 18"/>
+            <path d="M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <form class="search-overlay__form" role="search" id="searchOverlayForm" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search pieces</label>
+        <div class="search-overlay__field">
+          <input
+            type="search"
+            id="searchOverlayInput"
+            name="search"
+            autocomplete="off"
+            placeholder="Search pieces, materials, rooms…"
+            aria-label="Search pieces"
+            inputmode="search"
+          />
+          <button class="search-overlay__submit" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="13 6 19 12 13 18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+        <div class="search-overlay__hint" id="searchOverlayHint" aria-live="polite"></div>
+      </form>
+
+      <div class="search-overlay__bottom" aria-hidden="true">
+        <p class="search-overlay__fine">Tip: Press <kbd>ESC</kbd> to close.</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- =====================================================
+         SHOP HERO
+    ====================================================== -->
+    <section class="shop-hero" aria-label="Shop header">
+      <div class="shop-hero__inner" data-reveal="fade">
+        <span class="shop-hero__eyebrow">The Full Collection</span>
+        <h1 class="shop-hero__title">Shop All Furniture</h1>
+        <p class="shop-hero__subtitle">Explore every silhouette we make — sofas, seating, tables, beds and decor, each engineered for the way you actually live.</p>
+        <div class="shop-hero__stats">
+          <div class="shop-hero__stat"><b id="statTotal">0</b><span>Pieces</span></div>
+          <div class="shop-hero__stat"><b>5</b><span>Categories</span></div>
+          <div class="shop-hero__stat"><b>4.7</b><span>Avg. Rating</span></div>
+          <div class="shop-hero__stat"><b>10yr</b><span>Warranty</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb + view toggle -->
+    <div class="shop-toolbar">
+      <div class="shop-toolbar__crumbs"><a href="index.html">Home</a> / <b>Shop</b></div>
+      <div class="shop-toolbar__right">
+        <div class="shop-viewToggle" role="group" aria-label="Layout view">
+          <button type="button" class="is-active" id="viewGrid" aria-label="Grid view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </button>
+          <button type="button" id="viewList" aria-label="List view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="shop-layout" aria-label="Product listing">
+      <div class="shop-layout__inner">
+
+        <!-- ============ Filters (desktop sidebar) ============ -->
+        <aside class="shop-filters" aria-label="Filters">
+          <div class="shop-filters__panel">
+            <div class="shop-filters__top">
+              <h2 class="shop-filters__title">Filters</h2>
+            </div>
+
+            <div class="shop-filter-group">
+              <h3 class="shop-filter-group__title">Category</h3>
+              <div class="shop-filter-group__body" id="categoryList">
+                <!-- populated by JS -->
+              </div>
+            </div>
+
+            <div class="shop-filter-group">
+              <h3 class="shop-filter-group__title">Price range</h3>
+              <div class="shop-filter-group__body shop-price">
+                <label class="shop-field">
+                  <span class="shop-field__label">Min</span>
+                  <input type="number" class="shop-field__input" id="shopPriceMin" min="0" step="50" value="0" />
+                </label>
+                <label class="shop-field">
+                  <span class="shop-field__label">Max</span>
+                  <input type="number" class="shop-field__input" id="shopPriceMax" min="0" step="50" value="5000" />
+                </label>
+              </div>
+            </div>
+
+            <div class="shop-filter-group" aria-label="Rating filter">
+              <h3 class="shop-filter-group__title">Rating</h3>
+              <div class="shop-filter-group__body">
+                <label class="shop-check"><input type="radio" name="shopRatingMin" class="shop-check__input" value="4.5" checked /><span class="shop-check__label">4.5★ &amp; up</span></label>
+                <label class="shop-check"><input type="radio" name="shopRatingMin" class="shop-check__input" value="4.0" /><span class="shop-check__label">4.0★ &amp; up</span></label>
+                <label class="shop-check"><input type="radio" name="shopRatingMin" class="shop-check__input" value="3.5" /><span class="shop-check__label">3.5★ &amp; up</span></label>
+                <label class="shop-check"><input type="radio" name="shopRatingMin" class="shop-check__input" value="0" /><span class="shop-check__label">Any rating</span></label>
+              </div>
+            </div>
+
+            <div class="shop-filter-group" aria-label="Availability filter">
+              <h3 class="shop-filter-group__title">Availability</h3>
+              <div class="shop-filter-group__body">
+                <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStock" value="in" checked /><span class="shop-check__label">In Stock</span></label>
+                <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStock" value="low" checked /><span class="shop-check__label">Low Stock</span></label>
+                <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStock" value="out" /><span class="shop-check__label">Sold Out</span></label>
+              </div>
+            </div>
+
+            <div class="shop-filter-group">
+              <h3 class="shop-filter-group__title">Sort</h3>
+              <div class="shop-filter-group__body">
+                <label class="shop-select">
+                  <span class="shop-select__label">Order</span>
+                  <select class="shop-select__input" id="shopSort">
+                    <option value="newest" selected>Newest</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                    <option value="name">Name: A–Z</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="shop-filters__actions">
+              <button class="shop-btn shop-btn--ghost" type="button" id="shopClear">Clear</button>
+              <button class="shop-btn shop-btn--primary" type="button" id="shopApply">Apply</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ============ Mobile filter drawer ============ -->
+        <div id="shopFilterDrawer" aria-hidden="true" class="shop-filter-drawer" role="dialog" aria-label="Mobile filters">
+          <div class="shop-filter-drawer__scrim" data-drawer-scrim aria-hidden="true"></div>
+          <div class="shop-filter-drawer__panel" role="document">
+            <div class="shop-filter-drawer__top">
+              <h2 class="shop-filter-drawer__title">Filters</h2>
+              <button class="shop-filter-drawer__close" type="button" id="shopFilterClose" data-drawer-close aria-label="Close filters">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div class="shop-filter-drawer__body" tabindex="-1">
+
+              <div class="shop-filter-group">
+                <h3 class="shop-filter-group__title">Category</h3>
+                <div class="shop-filter-group__body" id="categoryListDrawer"></div>
+              </div>
+
+              <div class="shop-filter-group">
+                <h3 class="shop-filter-group__title">Price range</h3>
+                <div class="shop-filter-group__body shop-price">
+                  <label class="shop-field"><span class="shop-field__label">Min</span><input type="number" class="shop-field__input" id="shopPriceMinDrawer" min="0" step="50" value="0" /></label>
+                  <label class="shop-field"><span class="shop-field__label">Max</span><input type="number" class="shop-field__input" id="shopPriceMaxDrawer" min="0" step="50" value="5000" /></label>
+                </div>
+              </div>
+
+              <div class="shop-filter-group" aria-label="Rating filter">
+                <h3 class="shop-filter-group__title">Rating</h3>
+                <div class="shop-filter-group__body">
+                  <label class="shop-check"><input type="radio" name="shopRatingMinDrawer" class="shop-check__input" value="4.5" checked /><span class="shop-check__label">4.5★ &amp; up</span></label>
+                  <label class="shop-check"><input type="radio" name="shopRatingMinDrawer" class="shop-check__input" value="4.0" /><span class="shop-check__label">4.0★ &amp; up</span></label>
+                  <label class="shop-check"><input type="radio" name="shopRatingMinDrawer" class="shop-check__input" value="3.5" /><span class="shop-check__label">3.5★ &amp; up</span></label>
+                  <label class="shop-check"><input type="radio" name="shopRatingMinDrawer" class="shop-check__input" value="0" /><span class="shop-check__label">Any rating</span></label>
+                </div>
+              </div>
+
+              <div class="shop-filter-group" aria-label="Availability filter">
+                <h3 class="shop-filter-group__title">Availability</h3>
+                <div class="shop-filter-group__body">
+                  <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStockDrawer" value="in" checked /><span class="shop-check__label">In Stock</span></label>
+                  <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStockDrawer" value="low" checked /><span class="shop-check__label">Low Stock</span></label>
+                  <label class="shop-check"><input type="checkbox" class="shop-check__input" name="shopStockDrawer" value="out" /><span class="shop-check__label">Sold Out</span></label>
+                </div>
+              </div>
+
+              <div class="shop-filter-group">
+                <h3 class="shop-filter-group__title">Sort</h3>
+                <div class="shop-filter-group__body">
+                  <label class="shop-select">
+                    <span class="shop-select__label">Order</span>
+                    <select class="shop-select__input" id="shopSortDrawer">
+                      <option value="newest" selected>Newest</option>
+                      <option value="low">Price: Low to High</option>
+                      <option value="high">Price: High to Low</option>
+                      <option value="rating">Top Rated</option>
+                      <option value="name">Name: A–Z</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              <div class="shop-filters__actions shop-filter-drawer__actions">
+                <button class="shop-btn shop-btn--ghost" type="button" id="shopClearDrawer">Clear</button>
+                <button class="shop-btn shop-btn--primary" type="button" id="shopApplyDrawer">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ Grid ============ -->
+        <section class="shop-grid" aria-label="Products">
+          <div class="shop-grid__top">
+            <button type="button" id="shopFiltersDrawerOpen" class="shop-btn shop-btn--ghost shop-drawer-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="shopFilterDrawer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              Filters
+            </button>
+
+            <div class="shop-search">
+              <input type="search" id="shopSearch" class="shop-search__input" placeholder="Search sofas, tables, lighting…" aria-label="Search furniture" />
+              <span class="shop-search__hint" id="shopResultCount" aria-live="polite">0 items</span>
+            </div>
+
+            <div class="shop-pagination" id="shopPagination" aria-label="Pagination" role="navigation">
+              <div class="shop-pagination__row">
+                <button type="button" class="shop-pagination__btn shop-pagination__btn--prev" id="shopPagePrev" aria-label="Previous page" disabled>
+                  <span class="shop-pagination__ico" aria-hidden="true">‹</span>
+                  <span class="shop-pagination__label">Previous</span>
+                </button>
+                <div class="shop-pagination__numbers" id="shopPageNumbers" aria-label="Page numbers"></div>
+                <button type="button" class="shop-pagination__btn shop-pagination__btn--next" id="shopPageNext" aria-label="Next page" disabled>
+                  <span class="shop-pagination__label">Next</span>
+                  <span class="shop-pagination__ico" aria-hidden="true">›</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-activeChips" id="shopActiveChips"></div>
+
+          <div class="shop-grid__items" id="shopGridItems">
+            <!-- rendered by JS -->
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart-api.js"></script>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn" aria-label="Back to Top" title="Back to Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <!-- =====================================================
+       SHOP APP — self-contained, dependency-free
+       Handles: nav/mobile menu, search overlay, product data,
+       search, filters, sort, pagination, wishlist/cart demo counts.
+  ====================================================== -->
+  <script>
+  (function(){
+    "use strict";
+
+    /* ---------------------------------------------------------
+       0. Defensive nav helpers (work even if script.js is absent)
+    --------------------------------------------------------- */
+    function safeOn(el, evt, fn){ if(el) el.addEventListener(evt, fn); }
+
+    var burger = document.getElementById('navBurger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileScrim = document.getElementById('mobileScrim');
+    function closeMobileMenu(){
+      if(!mobileMenu) return;
+      mobileMenu.classList.remove('is-open');
+      mobileMenu.setAttribute('aria-hidden','true');
+      mobileScrim && mobileScrim.classList.remove('is-open');
+      burger && burger.setAttribute('aria-expanded','false');
+    }
+    function toggleMobileMenu(){
+      if(!mobileMenu) return;
+      var open = mobileMenu.classList.toggle('is-open');
+      mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      mobileScrim && mobileScrim.classList.toggle('is-open', open);
+      burger && burger.setAttribute('aria-expanded', String(open));
+    }
+    safeOn(burger, 'click', toggleMobileMenu);
+    safeOn(mobileScrim, 'click', closeMobileMenu);
+
+    var searchToggle = document.getElementById('searchToggle');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var searchScrim = searchOverlay ? searchOverlay.querySelector('[data-search-scrim]') : null;
+    var searchClose = searchOverlay ? searchOverlay.querySelector('[data-search-close]') : null;
+    var searchOverlayInput = document.getElementById('searchOverlayInput');
+
+    function openSearchOverlay(){
+      if(!searchOverlay) return;
+      searchOverlay.classList.add('is-open');
+      searchOverlay.setAttribute('aria-hidden','false');
+      searchToggle && searchToggle.setAttribute('aria-expanded','true');
+      setTimeout(function(){ searchOverlayInput && searchOverlayInput.focus(); }, 60);
+    }
+    function closeSearchOverlay(){
+      if(!searchOverlay) return;
+      searchOverlay.classList.remove('is-open');
+      searchOverlay.setAttribute('aria-hidden','true');
+      searchToggle && searchToggle.setAttribute('aria-expanded','false');
+    }
+    safeOn(searchToggle, 'click', openSearchOverlay);
+    safeOn(searchScrim, 'click', closeSearchOverlay);
+    safeOn(searchClose, 'click', closeSearchOverlay);
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ closeSearchOverlay(); closeMobileMenu(); }
+    });
+
+    document.querySelectorAll('.search-overlay__chip').forEach(function(chip){
+      chip.addEventListener('click', function(){
+        if(searchOverlayInput){ searchOverlayInput.value = chip.textContent.trim(); }
+      });
+    });
+
+    var searchOverlayForm = document.getElementById('searchOverlayForm');
+    safeOn(searchOverlayForm, 'submit', function(e){
+      e.preventDefault();
+      var val = (searchOverlayInput && searchOverlayInput.value || '').trim();
+      closeSearchOverlay();
+      var mainSearch = document.getElementById('shopSearch');
+      if(mainSearch){
+        mainSearch.value = val;
+        mainSearch.dispatchEvent(new Event('input'));
+        mainSearch.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+
+    // Back to top
+    var topBtn = document.getElementById('scrollToTopBtn');
+    if(topBtn){
+      window.addEventListener('scroll', function(){
+        topBtn.classList.toggle('is-visible', window.scrollY > 480);
+      });
+      topBtn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    }
+
+    /* ---------------------------------------------------------
+       1. Product catalogue (24 pieces across 5 categories)
+       Swap `img` paths for your real photography whenever ready —
+       placeholders use deterministic seeds so layout never breaks.
+    --------------------------------------------------------- */
+    var PRODUCTS = [
+      { id:1,  name:"Aurelia Dining Sofa",    category:"Sofas",  price:2499, oldPrice:null, rating:4.7, reviews:186, desc:"A statement silhouette in boucle, built for long conversations.", stock:"in",  date:"2026-05-20", badge:"new",  img:"assets/img/Dining-sofa.jpg" },
+      { id:2,  name:"Sable Platform Bed",     category:"Beds",   price:1899, oldPrice:2149, rating:4.8, reviews:201, desc:"Low profile elegance built for restful nights.",                  stock:"low", date:"2025-02-12", badge:"best", img:"assets/img/bedroom-furniture.jpg" },
+      { id:3,  name:"Nexo Lounge Chair",      category:"Chairs", price:799,  oldPrice:null, rating:4.6, reviews:74,  desc:"A sculpted seat with effortless comfort and presence.",           stock:"in",  date:"2025-06-01", badge:"new",  img:"assets/img/chairs-collection.jpg" },
+      { id:4,  name:"Marlow Dining Table",    category:"Tables", price:1650, oldPrice:1850, rating:4.9, reviews:142, desc:"Solid oak, hand-finished, seats up to eight comfortably.",        stock:"in",  date:"2025-11-02", badge:"sale", img:"assets/img/dining-table.jpg" },
+      { id:5,  name:"Haven Sectional Sofa",   category:"Sofas",  price:3299, oldPrice:null, rating:4.5, reviews:98,  desc:"Modular deep-seat comfort that adapts to any room.",              stock:"in",  date:"2025-09-14", badge:null,   img:"assets/img/sofa-set.jpg" },
+      { id:6,  name:"Vela Table Lamp",        category:"Decor",  price:349,  oldPrice:399,  rating:4.6, reviews:109, desc:"A warm glow with refined proportions and elegance.",              stock:"in",  date:"2025-07-30", badge:null,   img:"assets/img/Vela_Table_Lamp.jpg" },
+      { id:7,  name:"Rowan Accent Chair",     category:"Chairs", price:659,  oldPrice:null, rating:4.4, reviews:61,  desc:"Curved wingback in performance velvet for every room.",           stock:"in",  date:"2025-04-18", badge:null,   img:"https://picsum.photos/seed/rowan-chair/700/560" },
+      { id:8,  name:"Linden Coffee Table",    category:"Tables", price:549,  oldPrice:629,  rating:4.5, reviews:87,  desc:"Smoked oak top on a sculpted brass-toned base.",                  stock:"in",  date:"2025-03-09", badge:"sale", img:"assets/img/Linden_Coffee _able.jpg" },
+      { id:9,  name:"Cascade Bunk Bed",       category:"Beds",   price:1420, oldPrice:null, rating:4.3, reviews:52,  desc:"Space-smart design for growing families and guest rooms.",        stock:"low", date:"2025-08-22", badge:null,   img:"https://picsum.photos/seed/cascade-bed/700/560" },
+      { id:10, name:"Terra Ceramic Vase Set", category:"Decor",  price:189,  oldPrice:null, rating:4.7, reviews:134, desc:"Hand-thrown stoneware trio, matte finish, three sizes.",          stock:"in",  date:"2025-10-05", badge:"new",  img:"https://picsum.photos/seed/terra-vase/700/560" },
+      { id:11, name:"Onyx Leather Sofa",      category:"Sofas",  price:3899, oldPrice:4399, rating:4.8, reviews:167, desc:"Full-grain leather over a hardwood frame, built to age well.",   stock:"in",  date:"2025-12-01", badge:"sale", img:"assets/img/Onyx_Leather_Sofa.jpg" },
+      { id:12, name:"Bramble Dining Chair",   category:"Chairs", price:329,  oldPrice:null, rating:4.2, reviews:44,  desc:"Woven cane back with a solid ash frame, sold in pairs.",          stock:"out", date:"2025-01-27", badge:null,   img:"assets/img/Solstice_Console_Table.jpg" },
+      { id:13, name:"Solstice Console Table", category:"Tables", price:899,  oldPrice:null, rating:4.6, reviews:78,  desc:"A slim silhouette for entryways and behind-sofa styling.",        stock:"in",  date:"2026-01-15", badge:"new",  img:"assets/img/Solstice_Console_Table.jpg" },
+      { id:14, name:"Drift Upholstered Bed",  category:"Beds",   price:2199, oldPrice:2450, rating:4.7, reviews:113, desc:"Channel-tufted headboard with a cloud-soft base.",               stock:"in",  date:"2025-05-11", badge:"sale", img:"assets/img/Drift_Upholstered_Bed.jpg" },
+      { id:15, name:"Ember Floor Lamp",       category:"Decor",  price:279,  oldPrice:null, rating:4.5, reviews:66,  desc:"A soft-arc silhouette that flatters every corner.",               stock:"low", date:"2025-09-29", badge:null,   img:"assets/img/Ember_Floor_Lamp.jpg" },
+      { id:16, name:"Fennel Loveseat",        category:"Sofas",  price:1799, oldPrice:null, rating:4.4, reviews:59,  desc:"Compact scale, full-size comfort for smaller spaces.",            stock:"in",  date:"2025-06-30", badge:null,   img:"https://picsum.photos/seed/fennel-loveseat/700/560" },
+      { id:17, name:"Cove Swivel Chair",      category:"Chairs", price:949,  oldPrice:1050, rating:4.6, reviews:91,  desc:"360° swivel base with a plush bouclé shell.",                     stock:"in",  date:"2026-02-02", badge:"new",  img:"assets/img/Cove_Swivel_Chair.jpg" },
+      { id:18, name:"Aster Dining Table",     category:"Tables", price:2100, oldPrice:null, rating:4.8, reviews:104, desc:"Live-edge walnut slab, one-of-a-kind grain pattern.",            stock:"in",  date:"2025-11-20", badge:null,   img:"assets/img/dining-table-dinner-slider.jpg" },
+      { id:19, name:"Nova Daybed Frame",      category:"Beds",   price:1290, oldPrice:null, rating:4.3, reviews:38,  desc:"Multi-purpose frame for reading nooks and guest stays.",          stock:"in",  date:"2025-07-08", badge:null,   img:"https://picsum.photos/seed/nova-daybed/700/560" },
+      { id:20, name:"Willow Wall Mirror",     category:"Decor",  price:229,  oldPrice:259,  rating:4.6, reviews:72,  desc:"Organic curved frame in a warm brushed finish.",                  stock:"in",  date:"2025-08-03", badge:"sale", img:"assets/img/Willow_Wall_Mirror.jpg" },
+      { id:21, name:"Harbor Chesterfield",    category:"Sofas",  price:4299, oldPrice:null, rating:4.9, reviews:212, desc:"Deep button-tufted classic reimagined for today's homes.",       stock:"low", date:"2025-10-18", badge:"best", img:"assets/img/Harbor_Chesterfield.jpg" },
+      { id:22, name:"Pella Rocking Chair",    category:"Chairs", price:519,  oldPrice:null, rating:4.5, reviews:47,  desc:"A gentle rock with steam-bent oak and a woven seat.",             stock:"in",  date:"2025-04-27", badge:null,   img:"assets/img/Rocking_Chair.jpg" },
+      { id:23, name:"Quill Side Table",       category:"Tables", price:229,  oldPrice:null, rating:4.4, reviews:35,  desc:"A featherweight companion piece for sofas and beds alike.",       stock:"in",  date:"2025-12-14", badge:"new",  img:"https://picsum.photos/seed/quill-table/700/560" },
+      { id:24, name:"Meadow Throw Pillow Set",category:"Decor",  price:99,   oldPrice:129,  rating:4.3, reviews:58,  desc:"Set of three in undyed linen with hidden zip closures.",         stock:"in",  date:"2025-05-05", badge:"sale", img:"https://picsum.photos/seed/meadow-pillow/700/560" }
+    ];
+
+    var CATEGORIES = ["Sofas","Chairs","Tables","Beds","Decor"];
+    var PAGE_SIZE = 8;
+
+    /* ---------------------------------------------------------
+       2. State
+    --------------------------------------------------------- */
+    var state = {
+      search: "",
+      categories: CATEGORIES.slice(),
+      priceMin: 0,
+      priceMax: 5000,
+      ratingMin: 4.5,
+      stock: ["in","low"],
+      sort: "newest",
+      page: 1,
+      view: "grid"
+    };
+
+    // Prefill search from ?search= query param (nav overlay redirect target)
+    try{
+      var qs = new URLSearchParams(window.location.search);
+      if(qs.get('search')) state.search = qs.get('search');
+    }catch(e){}
+
+    /* ---------------------------------------------------------
+       3. Build category checkbox lists (desktop + drawer)
+    --------------------------------------------------------- */
+    function buildCategoryList(containerId, namePrefix){
+      var el = document.getElementById(containerId);
+      if(!el) return;
+      el.innerHTML = CATEGORIES.map(function(cat){
+        return '<label class="shop-check">' +
+          '<input class="shop-check__input" type="checkbox" data-cat-filter="'+namePrefix+'" value="'+cat+'" checked>' +
+          '<span class="shop-check__label">'+cat+'</span></label>';
+      }).join('');
+    }
+    buildCategoryList('categoryList','main');
+    buildCategoryList('categoryListDrawer','drawer');
+
+    /* ---------------------------------------------------------
+       4. Card rendering
+    --------------------------------------------------------- */
+    function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+    function starPct(r){ return Math.round((r/5)*100) + '%'; }
+
+    var cartItems = {};
+
+    function renderCard(p){
+      var save = p.oldPrice ? Math.round(100 - (p.price/p.oldPrice*100)) : null;
+      var badgeHtml = '';
+      if(p.badge === 'new') badgeHtml += '<span class="shop-card__badge shop-card__badge--new">New</span>';
+      if(p.badge === 'best') badgeHtml += '<span class="shop-card__badge shop-card__badge--best">Best Seller</span>';
+      if(p.badge === 'sale' && save) badgeHtml += '<span class="shop-card__badge shop-card__badge--sale">&minus;'+save+'%</span>';
+
+      var stockLabel = p.stock === 'in' ? 'In Stock' : p.stock === 'low' ? 'Only a few left' : 'Sold Out';
+      var stockClass = 'shop-card__stock--' + p.stock;
+
+      var priceHtml = '<span class="shop-card__price">'+money(p.price)+'</span>';
+      if(p.oldPrice){
+        priceHtml += '<span class="shop-card__old">'+money(p.oldPrice)+'</span><span class="shop-card__save">Save '+save+'%</span>';
+      }
+
+      var isWish = !!(window.NEXORA && window.NEXORA.wishlist && window.NEXORA.wishlist.isActive(p.id));
+      var disabledAttr = p.stock === 'out' ? 'disabled' : '';
+
+      return (
+        '<article class="shop-card'+(p.badge==='onsale'?' shop-card--onsale':'')+'" data-id="'+p.id+'" data-reveal="fade">' +
+          '<div class="shop-card__inner">' +
+            '<div class="shop-card__media">' +
+              '<img class="shop-card__img" src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.src=\'https://picsum.photos/seed/fallback'+p.id+'/700/560\'" />' +
+              '<div class="shop-card__badges">'+badgeHtml+'</div>' +
+              '<div class="shop-card__overlay-actions">' +
+                '<button class="shop-card__wishlist'+(isWish?' is-active':'')+'" type="button" aria-label="Add to wishlist" data-wishlist data-id="'+p.id+'">' +
+                  '<span class="shop-card__wishlist-ico"><svg viewBox="0 0 24 24" fill="'+(isWish?'currentColor':'none')+'" stroke="currentColor" stroke-width="1.5"><path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/></svg></span>' +
+                '</button>' +
+                '<button class="shop-card__quick" type="button" aria-label="Quick view" data-quick-view data-id="'+p.id+'">' +
+                  '<span class="shop-card__quick-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 12S5.8 5.5 12 5.5 21.5 12 21.5 12 18.2 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></span>' +
+                  '<span class="shop-visually-hidden">Quick View</span>' +
+                '</button>' +
+              '</div>' +
+            '</div>' +
+            '<div class="shop-card__body">' +
+              '<span class="shop-pill">'+p.category+'</span>' +
+              '<h3 class="shop-card__title">'+p.name+'</h3>' +
+              '<div class="shop-card__rating" role="img" aria-label="'+p.rating+' out of 5 stars, '+p.reviews+' reviews" style="--rating:'+starPct(p.rating)+'">' +
+                '<span class="shop-card__stars"><span class="shop-card__stars-track">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="shop-card__stars-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>' +
+                '<span class="shop-card__ratingValue">'+p.rating+'</span>' +
+                '<span class="shop-card__reviews">('+p.reviews+')</span>' +
+              '</div>' +
+              '<p class="shop-card__desc">'+p.desc+'</p>' +
+              '<div class="shop-card__pricing">'+priceHtml+'</div>' +
+              '<div class="shop-card__stock '+stockClass+'"><span class="shop-card__stock-dot"></span>'+stockLabel+'</div>' +
+              '<div class="shop-card__actions" role="group" aria-label="Product actions">' +
+                '<button class="shop-card__add shop-btn shop-btn--primary" type="button" data-cart data-id="'+p.id+'" data-name="'+p.name.replace(/"/g,'"')+'" data-price="'+p.price+'" data-desc="'+p.desc.replace(/"/g,'"')+'" '+disabledAttr+'>' +
+
+                  '<svg class="shop-card__add-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 8h11l1 12.5h-13L6.5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>' +
+                  (p.stock === 'out' ? 'Sold Out' : 'Add to Cart') +
+                '</button>' +
+                '<a class="shop-card__details shop-btn shop-btn--ghost" href="#" aria-label="View details for '+p.name+'" data-view-details data-id="'+p.id+'">' +
+                  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
+                '</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</article>'
+      );
+    }
+
+    /* ---------------------------------------------------------
+       5. Filtering / sorting / pagination pipeline
+    --------------------------------------------------------- */
+    function getFiltered(){
+      var q = state.search.trim().toLowerCase();
+      var list = PRODUCTS.filter(function(p){
+        if(state.categories.indexOf(p.category) === -1) return false;
+        if(p.price < state.priceMin || p.price > state.priceMax) return false;
+        if(p.rating < state.ratingMin) return false;
+        if(state.stock.indexOf(p.stock) === -1) return false;
+        if(q){
+          var hay = (p.name + ' ' + p.category + ' ' + p.desc).toLowerCase();
+          if(hay.indexOf(q) === -1) return false;
+        }
+        return true;
+      });
+
+      list.sort(function(a,b){
+        switch(state.sort){
+          case 'low': return a.price - b.price;
+          case 'high': return b.price - a.price;
+          case 'rating': return b.rating - a.rating;
+          case 'name': return a.name.localeCompare(b.name);
+          default: return new Date(b.date) - new Date(a.date); // newest
+        }
+      });
+
+      return list;
+    }
+
+    function renderChips(){
+      var chipsEl = document.getElementById('shopActiveChips');
+      if(!chipsEl) return;
+      var chips = [];
+
+      if(state.search){
+        chips.push({label:'"'+state.search+'"', key:'search'});
+      }
+      if(state.categories.length < CATEGORIES.length){
+        CATEGORIES.forEach(function(c){
+          if(state.categories.indexOf(c) === -1) return;
+          if(state.categories.length !== CATEGORIES.length) chips.push({label:c, key:'cat', val:c});
+        });
+      }
+      if(state.priceMin > 0 || state.priceMax < 5000){
+        chips.push({label: money(state.priceMin)+'–'+money(state.priceMax), key:'price'});
+      }
+      if(state.ratingMin > 0){
+        chips.push({label: state.ratingMin+'★ & up', key:'rating'});
+      }
+
+      if(!chips.length){ chipsEl.innerHTML = ''; return; }
+
+      chipsEl.innerHTML = chips.map(function(c){
+        return '<span class="shop-chip" data-chip-key="'+c.key+'" data-chip-val="'+(c.val||'')+'">'+c.label+'<button type="button" aria-label="Remove filter">&times;</button></span>';
+      }).join('') + '<span class="shop-chip shop-chip--clear" id="chipClearAll" style="cursor:pointer;">Clear all</span>';
+
+      chipsEl.querySelectorAll('.shop-chip[data-chip-key] > button').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var chip = btn.parentElement;
+          var key = chip.getAttribute('data-chip-key');
+          var val = chip.getAttribute('data-chip-val');
+          if(key === 'search'){ state.search = ''; syncControl('#shopSearch', ''); }
+          if(key === 'cat'){ state.categories = CATEGORIES.slice(); syncCategoryChecks(); }
+          if(key === 'price'){ state.priceMin = 0; state.priceMax = 5000; syncControl('#shopPriceMin',0); syncControl('#shopPriceMax',5000); syncControl('#shopPriceMinDrawer',0); syncControl('#shopPriceMaxDrawer',5000); }
+          if(key === 'rating'){ state.ratingMin = 0; syncRadios('shopRatingMin','0'); syncRadios('shopRatingMinDrawer','0'); }
+          state.page = 1;
+          renderAll();
+        });
+      });
+      var clearAll = document.getElementById('chipClearAll');
+      if(clearAll){ clearAll.addEventListener('click', resetFilters); }
+    }
+
+    function renderGrid(){
+      var filtered = getFiltered();
+      var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      if(state.page > totalPages) state.page = totalPages;
+      var start = (state.page - 1) * PAGE_SIZE;
+      var pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+      var gridEl = document.getElementById('shopGridItems');
+      var countEl = document.getElementById('shopResultCount');
+      var statTotal = document.getElementById('statTotal');
+      if(statTotal) statTotal.textContent = PRODUCTS.length;
+
+      if(!pageItems.length){
+        gridEl.innerHTML = '<div class="shop-empty">' +
+          '<div class="shop-empty__ico">🔍</div>' +
+          '<h3>No pieces match your filters</h3>' +
+          '<p>Try widening your price range, clearing a filter, or searching a different term.</p>' +
+          '<button class="shop-btn shop-btn--primary" id="emptyReset" style="max-width:220px;margin:0 auto;height:46px;">Reset filters</button>' +
+        '</div>';
+        var er = document.getElementById('emptyReset');
+        if(er) er.addEventListener('click', resetFilters);
+      } else {
+        gridEl.innerHTML = pageItems.map(renderCard).join('');
+      }
+
+      if(countEl) countEl.textContent = filtered.length + (filtered.length === 1 ? ' item' : ' items');
+
+      renderPagination(totalPages, filtered.length);
+      bindCardEvents();
+
+      // Hook newly-rendered cards into the shared scroll-reveal observer.
+      if(window.NEXORA && window.NEXORA.reveal && typeof window.NEXORA.reveal.observe === 'function'){
+        document.querySelectorAll('#shopGridItems [data-reveal="fade"]').forEach(function(el){
+          window.NEXORA.reveal.observe(el);
+        });
+      }
+    }
+
+    function renderPagination(totalPages, totalItems){
+      var numsEl = document.getElementById('shopPageNumbers');
+      var prevBtn = document.getElementById('shopPagePrev');
+      var nextBtn = document.getElementById('shopPageNext');
+      if(!numsEl) return;
+
+      if(totalItems === 0){
+        numsEl.innerHTML = '';
+        prevBtn.disabled = true; nextBtn.disabled = true;
+        return;
+      }
+
+      var pages = [];
+      var p = state.page;
+      var windowSize = 1;
+      pages.push(1);
+      for(var i = p - windowSize; i <= p + windowSize; i++){
+        if(i > 1 && i < totalPages) pages.push(i);
+      }
+      if(totalPages > 1) pages.push(totalPages);
+      pages = pages.filter(function(v,i,a){ return a.indexOf(v) === i; }).sort(function(a,b){return a-b;});
+
+      var html = '';
+      var prevPage = null;
+      pages.forEach(function(num){
+        if(prevPage !== null && num - prevPage > 1){
+          html += '<span style="padding:0 4px;color:rgba(17,17,17,0.35);font-weight:700;">…</span>';
+        }
+        html += '<button type="button" class="shop-page-btn'+(num===p?' is-active':'')+'" data-page="'+num+'" aria-label="Page '+num+'" '+(num===p?'aria-current="page"':'')+'>'+num+'</button>';
+        prevPage = num;
+      });
+      numsEl.innerHTML = html;
+
+      numsEl.querySelectorAll('[data-page]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          state.page = parseInt(btn.getAttribute('data-page'), 10);
+          renderGrid();
+          document.getElementById('shopGridItems').scrollIntoView({behavior:'smooth', block:'start'});
+        });
+      });
+
+      prevBtn.disabled = p <= 1;
+      nextBtn.disabled = p >= totalPages;
+    }
+
+    document.getElementById('shopPagePrev').addEventListener('click', function(){
+      if(state.page > 1){ state.page--; renderGrid(); }
+    });
+    document.getElementById('shopPageNext').addEventListener('click', function(){
+      state.page++; renderGrid();
+    });
+
+    function bindCardEvents(){
+      document.querySelectorAll('[data-cart]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          if(btn.disabled) return;
+          var id = btn.getAttribute('data-id');
+
+          // Persist cart in localStorage via unified cart API
+          try{
+            if(window.NEXORA && window.NEXORA.cart && typeof window.NEXORA.cart.add === 'function'){
+              window.NEXORA.cart.add(id, 1, {
+                title: btn.getAttribute('data-name') || '',
+                price: Number(btn.getAttribute('data-price')) || 0,
+                category: (btn.closest('[data-id]')?.getAttribute('data-category') || '') || '',
+                img: (btn.closest('article')?.querySelector('img.shop-card__img')?.getAttribute('src')) || '',
+                url: 'product-details.html'
+              });
+            }
+          }catch(e){
+            // If cart-api fails, fall back to old in-memory behavior (no persistence)
+            cartItems[id] = (cartItems[id] || 0) + 1;
+            updateCartCount();
+          }
+
+          var original = btn.innerHTML;
+          btn.classList.add('is-added');
+          btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L19 7"/></svg> Added';
+          setTimeout(function(){
+            btn.classList.remove('is-added');
+            btn.innerHTML = original;
+          }, 1400);
+
+        });
+      });
+
+
+
+      document.querySelectorAll('[data-wishlist]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var id = btn.getAttribute('data-id');
+          var product = PRODUCTS.find(function(pr){ return String(pr.id) === String(id); });
+
+          var isActive;
+          if(window.NEXORA && window.NEXORA.wishlist && typeof window.NEXORA.wishlist.toggle === 'function'){
+            isActive = window.NEXORA.wishlist.toggle(id, product ? {
+              title: product.name,
+              category: product.category,
+              price: product.price,
+              img: product.img,
+              url: 'product-details.html'
+            } : null);
+          } else {
+            // Fallback (should not normally happen — script.js defines this API)
+            isActive = !btn.classList.contains('is-active');
+          }
+
+          btn.classList.toggle('is-active', isActive);
+          var svg = btn.querySelector('svg');
+          if(svg) svg.setAttribute('fill', isActive ? 'currentColor' : 'none');
+          updateWishlistCount();
+        });
+      });
+
+      document.querySelectorAll('[data-quick-view], [data-view-details]').forEach(function(el){
+        el.addEventListener('click', function(e){
+          e.preventDefault();
+          var id = el.getAttribute('data-id');
+          var product = PRODUCTS.find(function(pr){ return String(pr.id) === String(id); });
+          if(product){ alert(product.name + '\n\n' + product.desc + '\n\nPrice: ' + money(product.price)); }
+        });
+      });
+    }
+
+    function updateCartCount(){
+      // Prefer cart-api count (localStorage-backed). Fallback to in-memory cartItems.
+      try{
+        if(window.NEXORA && window.NEXORA.cart && typeof window.NEXORA.cart.getCount === 'function'){
+          var el = document.getElementById('cartCount');
+          if(el) el.textContent = window.NEXORA.cart.getCount();
+          return;
+        }
+      }catch(e){}
+
+      var count = Object.values(cartItems).reduce(function(a,b){return a+b;},0);
+      var el = document.getElementById('cartCount');
+      if(el) el.textContent = count;
+    }
+
+    function updateWishlistCount(){
+      var count = (window.NEXORA && Array.isArray(window.NEXORA.state.wishlist))
+        ? window.NEXORA.state.wishlist.length
+        : 0;
+      var el = document.getElementById('wishlistCount');
+      if(el) el.textContent = count;
+    }
+
+    /* ---------------------------------------------------------
+       6. Filter control wiring (desktop + drawer, kept in sync)
+    --------------------------------------------------------- */
+    function syncControl(sel, val){ var el = document.querySelector(sel); if(el) el.value = val; }
+    function syncRadios(name, val){
+      document.querySelectorAll('input[name="'+name+'"]').forEach(function(r){ r.checked = (r.value === val); });
+    }
+    function syncCategoryChecks(){
+      document.querySelectorAll('[data-cat-filter]').forEach(function(cb){
+        cb.checked = state.categories.indexOf(cb.value) !== -1;
+      });
+    }
+
+    function readControlsInto(state){
+      // Categories: read from whichever set the user touched last — union of both panels' checked values by name
+      var checkedCats = {};
+      document.querySelectorAll('[data-cat-filter]').forEach(function(cb){
+        if(cb.checked) checkedCats[cb.value] = true;
+      });
+      state.categories = Object.keys(checkedCats);
+
+      var min = parseFloat(document.getElementById('shopPriceMin').value) || 0;
+      var max = parseFloat(document.getElementById('shopPriceMax').value) || 5000;
+      state.priceMin = min; state.priceMax = max;
+
+      var ratingChecked = document.querySelector('input[name="shopRatingMin"]:checked');
+      state.ratingMin = ratingChecked ? parseFloat(ratingChecked.value) : 0;
+
+      var stockChecked = [];
+      document.querySelectorAll('input[name="shopStock"]:checked').forEach(function(cb){ stockChecked.push(cb.value); });
+      state.stock = stockChecked;
+
+      state.sort = document.getElementById('shopSort').value;
+    }
+
+    function applyFilters(){
+      readControlsInto(state);
+      state.page = 1;
+      renderChips();
+      renderGrid();
+      closeDrawer();
+    }
+
+    function resetFilters(){
+      state.search = '';
+      state.categories = CATEGORIES.slice();
+      state.priceMin = 0; state.priceMax = 5000;
+      state.ratingMin = 4.5;
+      state.stock = ['in','low'];
+      state.sort = 'newest';
+      state.page = 1;
+
+      syncControl('#shopSearch','');
+      syncCategoryChecks();
+      syncControl('#shopPriceMin',0); syncControl('#shopPriceMax',5000);
+      syncControl('#shopPriceMinDrawer',0); syncControl('#shopPriceMaxDrawer',5000);
+      syncRadios('shopRatingMin','4.5'); syncRadios('shopRatingMinDrawer','4.5');
+      document.querySelectorAll('input[name="shopStock"]').forEach(function(cb){ cb.checked = (cb.value==='in'||cb.value==='low'); });
+      document.querySelectorAll('input[name="shopStockDrawer"]').forEach(function(cb){ cb.checked = (cb.value==='in'||cb.value==='low'); });
+      syncControl('#shopSort','newest'); syncControl('#shopSortDrawer','newest');
+
+      renderChips();
+      renderGrid();
+    }
+
+    // Desktop buttons
+    document.getElementById('shopApply').addEventListener('click', applyFilters);
+    document.getElementById('shopClear').addEventListener('click', resetFilters);
+    // Drawer buttons mirror desktop but read same shared inputs (category checkboxes duplicated by data-cat-filter)
+    document.getElementById('shopApplyDrawer').addEventListener('click', applyFilters);
+    document.getElementById('shopClearDrawer').addEventListener('click', resetFilters);
+
+    // Live search
+    var searchInput = document.getElementById('shopSearch');
+    var searchDebounce;
+    searchInput.addEventListener('input', function(){
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(function(){
+        state.search = searchInput.value;
+        state.page = 1;
+        renderChips();
+        renderGrid();
+      }, 160);
+    });
+    if(state.search) searchInput.value = state.search;
+
+    // Sort changes apply immediately for a snappier feel
+    document.getElementById('shopSort').addEventListener('change', function(){
+      document.getElementById('shopSortDrawer').value = this.value;
+      applyFilters();
+    });
+    document.getElementById('shopSortDrawer').addEventListener('change', function(){
+      document.getElementById('shopSort').value = this.value;
+      applyFilters();
+    });
+
+    /* ---------------------------------------------------------
+       7. Mobile drawer open/close
+    --------------------------------------------------------- */
+    var drawer = document.getElementById('shopFilterDrawer');
+    var drawerOpenBtn = document.getElementById('shopFiltersDrawerOpen');
+    var drawerCloseBtn = document.getElementById('shopFilterClose');
+    var drawerScrim = drawer.querySelector('[data-drawer-scrim]');
+
+    function openDrawer(){
+      drawer.classList.add('is-open');
+      drawer.setAttribute('aria-hidden','false');
+      drawerOpenBtn.setAttribute('aria-expanded','true');
+    }
+    function closeDrawer(){
+      drawer.classList.remove('is-open');
+      drawer.setAttribute('aria-hidden','true');
+      drawerOpenBtn.setAttribute('aria-expanded','false');
+    }
+    drawerOpenBtn.addEventListener('click', openDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+    drawerScrim.addEventListener('click', closeDrawer);
+
+    /* ---------------------------------------------------------
+       8. View toggle (grid / list)
+    --------------------------------------------------------- */
+    var gridBtn = document.getElementById('viewGrid');
+    var listBtn = document.getElementById('viewList');
+    var gridItemsEl = document.getElementById('shopGridItems');
+    gridBtn.addEventListener('click', function(){
+      gridItemsEl.classList.remove('is-list');
+      gridBtn.classList.add('is-active'); listBtn.classList.remove('is-active');
+    });
+    listBtn.addEventListener('click', function(){
+      gridItemsEl.classList.add('is-list');
+      listBtn.classList.add('is-active'); gridBtn.classList.remove('is-active');
+    });
+
+    /* ---------------------------------------------------------
+       9. Initial render
+    --------------------------------------------------------- */
+    function renderAll(){ renderChips(); renderGrid(); }
+    renderAll();
+
+  })();
+  </script>
+
+</body>
+</html>

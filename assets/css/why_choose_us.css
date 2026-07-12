@@ -1,0 +1,232 @@
+.wcu{
+    --cream:      #FAF7F2;
+    --paper:      #FFFFFF;
+    --ink:        #1C1815;
+    --ink-soft:   rgba(28,24,21,.62);
+    --ink-faint:  rgba(28,24,21,.40);
+    --gold:       #B8905A;
+    --gold-deep:  #8F6B3E;
+    --line:       rgba(28,24,21,.11);
+    --gold-tint:  rgba(184,144,90,.13);
+    --ease: cubic-bezier(.16,.84,.32,1);
+
+    background: var(--cream);
+    padding: 128px 24px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+  }
+
+  .wcu__inner{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.86fr 1.14fr;
+    gap: 96px;
+  }
+
+  /* ---------- LEFT: editorial intro ---------- */
+
+  .wcu__intro{
+    position: sticky;
+    top: 48px;
+    align-self: start;
+  }
+
+  .wcu__eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 22px;
+  }
+
+  .wcu__eyebrow::before{
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: var(--gold-deep);
+  }
+
+  .wcu__title{
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-size: clamp(34px, 3.4vw, 50px);
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    color: var(--ink);
+  }
+
+  .wcu__title em{
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold-deep);
+  }
+
+  .wcu__desc{
+    margin: 24px 0 0;
+    max-width: 40ch;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  /* stat block — the signature element */
+  .wcu__stat{
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px dashed rgba(28,24,21,.22);
+    position: relative;
+  }
+
+  .wcu__stat::before{
+    /* stitch mark at the seam */
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 34px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  .wcu__stat-number{
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .wcu__stat-number span{
+    color: var(--gold-deep);
+  }
+
+  .wcu__stat-label{
+    display: block;
+    margin-top: 10px;
+    max-width: 30ch;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- RIGHT: feature grid ---------- */
+
+  .wcu__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .wcu__card{
+    background: var(--paper);
+    padding: 40px 34px 36px;
+    position: relative;
+    outline: none;
+    transition: background .4s var(--ease);
+  }
+
+  .wcu__card:hover,
+  .wcu__card:focus-visible{
+    background: #FEFDFB;
+  }
+
+  .wcu__card:focus-visible{
+    box-shadow: inset 0 0 0 2px var(--gold);
+  }
+
+  .wcu__index{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-bottom: 22px;
+    display: block;
+  }
+
+  .wcu__icon{
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    margin-bottom: 22px;
+    transition: color .4s var(--ease), transform .5s var(--ease);
+  }
+
+  .wcu__icon svg{
+    width: 27px;
+    height: 27px;
+  }
+
+  .wcu__card:hover .wcu__icon{
+    color: var(--gold-deep);
+    transform: translateY(-3px);
+  }
+
+  .wcu__card-title{
+    margin: 0 0 10px;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -.01em;
+    color: var(--ink);
+
+    /* the stitch-seam underline signature */
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    background-image: linear-gradient(var(--gold), var(--gold));
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size .5s var(--ease);
+  }
+
+  .wcu__card:hover .wcu__card-title{
+    background-size: 100% 2px;
+  }
+
+  .wcu__card-desc{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 30ch;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+
+  @media (max-width: 1024px){
+    .wcu__inner{
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+    .wcu__intro{ position: static; max-width: 60ch; }
+  }
+
+  @media (max-width: 640px){
+    .wcu{ padding: 80px 18px; }
+    .wcu__title{ font-size: 30px; }
+    .wcu__grid{ grid-template-columns: 1fr; border-radius: 18px; }
+    .wcu__card{ padding: 30px 24px; }
+    .wcu__stat-number{ font-size: 38px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .wcu__card, .wcu__icon, .wcu__card-title{ transition: none; }
+    .wcu__card:hover .wcu__icon{ transform: none; }
+  }

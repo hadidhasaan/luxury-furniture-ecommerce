@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA — About Us</title>
+  <meta name="description" content="NEXORA — Designed for Modern Living. Craftsmanship, modern design, and timeless premium furniture." >
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/search.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       ATELIER BAR — signature announcement strip
+  ====================================================== -->
+  <div class="atelier-bar" id="atelierBar">
+    <div class="atelier-track" id="atelierTrack">
+      <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+      <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+      <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       PREMIUM NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <!-- Mobile menu trigger -->
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+      <!-- Primary nav -->
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav-link" data-nav>Home</a>
+        <a href="shop.html" class="nav-link" data-nav>Shop</a>
+        <a href="collections.html" class="nav-link" data-nav>Collections</a>
+        <a href="journal.html" class="nav-link" data-nav>Journal</a>
+        <a href="about.html" class="nav-link" data-nav>About</a>
+        <a href="contact.html" class="nav-link" data-nav>Contact</a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+
+      <!-- Utility icons -->
+      <div class="nav-utility">
+
+       <!-- search start -->
+      <div class="nav-search" id="navSearch">
+      <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+        </svg>
+      </button>
+    </div>
+
+     <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="searchOverlayTitle">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+
+    <div class="search-overlay__panel">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title" id="searchOverlayTitle">Search the catalogue</h2>
+        <button class="search-overlay__close" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--
+        data-search-target is ROOT-RELATIVE on purpose.
+        Whether this page lives at /index.html or
+        /collections/outdoor/lounge-chairs.html, the
+        redirect always resolves to the same place.
+        Change it once here to match your real shop URL.
+      -->
+      <form id="searchOverlayForm" class="search-overlay__form" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search products</label>
+        <div class="search-overlay__field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+          </svg>
+          <input type="text" id="searchOverlayInput" name="search" placeholder="Search sofas, dining tables, lighting…" autocomplete="off">
+          <button type="submit" class="search-overlay__submit" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+      </form>
+
+      <div class="search-overlay__bottom">
+        <p class="search-overlay__fine">Press <kbd>Esc</kbd> to close</p>
+       
+      </div>
+    </div>
+  </div>
+    <!-- search end -->
+
+        <!-- Account -->
+        <button class="nav-icon-btn nav-account" aria-label="Account">
+
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.4"/>
+            <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+          </svg>
+        </button>
+
+      <!-- Dark Mode Toggle (Dropdown) -->
+      <div class="theme-toggle" style="position:relative;">
+        <button
+          id="themeToggleBtn"
+          class="nav-icon-btn"
+          type="button"
+          aria-label="Theme: Auto"
+          aria-pressed="false"
+          aria-expanded="false">
+
+          <!-- AUTO icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" data-theme-icon="auto" class="is-active">
+            <path d="M12 2a7 7 0 0 0 0 14a7 7 0 0 0 0-14Z"/>
+            <path d="M20 4l1 2l2 1l-2 1l-1 2l-1-2l-2-1l2-1l1-2Z"/>
+          </svg>
+
+          <!-- DARK icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" data-theme-icon="dark" style="display:none;">
+            <path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a6.8 6.8 0 0 0 9.5 9.5Z"/>
+          </svg>
+
+          <!-- LIGHT icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" data-theme-icon="light" style="display:none;">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="M4.2 4.2l1.4 1.4"/>
+            <path d="M18.4 18.4l1.4 1.4"/>
+            <path d="M19.8 4.2l-1.4 1.4"/>
+            <path d="M5.6 18.4l-1.4 1.4"/>
+          </svg>
+        </button>
+
+        <div
+          data-theme-toggle-panel
+          class="theme-toggle__panel"
+          aria-label="Theme options"
+          style="display:none; position:absolute; right:0; top:54px; min-width:180px; background: rgba(255,255,255,0.92); border:1px solid rgba(234,231,224,0.95); border-radius:14px; padding:10px; box-shadow: 0 40px 120px -80px rgba(0,0,0,0.65); z-index:20000;">
+
+          <button type="button" data-theme-value="auto" style="width:100%; text-align:left; padding:10px 12px; border-radius:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:11px; color:#111; background:transparent; border:1px solid transparent;">Auto</button>
+          <button type="button" data-theme-value="light" style="width:100%; text-align:left; padding:10px 12px; border-radius:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:11px; color:#111; background:transparent; border:1px solid transparent; margin-top:6px;">Light</button>
+          <button type="button" data-theme-value="dark" style="width:100%; text-align:left; padding:10px 12px; border-radius:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:11px; color:#111; background:transparent; border:1px solid transparent; margin-top:6px;">Dark</button>
+        </div>
+      </div>
+
+
+
+
+
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+          </svg>
+          <span class="nav-count" id="wishlistCount">0</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+            <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+          </svg>
+          <span class="nav-count nav-count--accent" id="cartCount">0</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Mobile slide-in menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-links" aria-label="Mobile primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-tagline">Designed for Modern Living</p>
+      </div>
+    </div>
+    <div class="mobile-menu-scrim" id="mobileScrim"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- =====================================================
+         HERO SECTION — About
+    ====================================================== -->
+    <section class="about-hero" id="aboutHero" aria-label="About NEXORA introduction">
+      <div class="about-hero__inner">
+        <div class="about-hero__media" aria-hidden="true">
+          <img class="about-hero__img" src="assets/img/sofa-set.jpg" alt="" loading="eager" decoding="async">
+          <div class="about-hero__overlay"></div>
+          <div class="about-hero__goldFrame"></div>
+        </div>
+
+        <div class="about-hero__content">
+          <p class="about-hero__eyebrow" data-about-reveal="fade">Premium Modern Furniture</p>
+
+          <h1 class="about-hero__headline" data-about-reveal="fade">
+            Designed for Modern Living
+          </h1>
+
+          <p class="about-hero__text" data-about-reveal="fade">
+            NEXORA creates luxury furniture with a quiet confidence—crafted for everyday rituals, refined through timeless design,
+            and built with premium materials that feel better with time.
+          </p>
+
+          <div class="about-hero__cta" data-about-reveal="fade">
+            <a class="about-hero__btn about-hero__btn--primary" href="shop.html" aria-label="Shop NEXORA">
+              <span>Shop</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+            <a class="about-hero__btn about-hero__btn--secondary" href="#aboutStory" aria-label="Read our brand story">
+              <span>Our Story</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="about-hero__trust" aria-label="Brand trust highlights" data-about-reveal="fade">
+            <li>
+              <span class="about-hero__trustIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2 7h11v9H2z"/><path d="M13 10h4l4 3.2V16h-8z"/>
+                  <circle cx="6.5" cy="18" r="1.7"/><circle cx="17" cy="18" r="1.7"/>
+                </svg>
+              </span>
+              <span class="about-hero__trustText">
+                <strong>White-glove</strong>
+                <em>Concierge delivery</em>
+              </span>
+            </li>
+            <li>
+              <span class="about-hero__trustIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z"/>
+                  <path d="M12 8v5l3 2"/>
+                  <path d="M9 21h6"/>
+                </svg>
+              </span>
+              <span class="about-hero__trustText">
+                <strong>Premium quality</strong>
+                <em>Built to outlast</em>
+              </span>
+            </li>
+            <li>
+              <span class="about-hero__trustIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </span>
+              <span class="about-hero__trustText">
+                <strong>2-Year warranty</strong>
+                <em>Peace of mind</em>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-hero__bottom" aria-hidden="true">
+        <div class="about-hero__bottomInner">
+          <div class="about-hero__metric">
+            <span class="about-hero__metricNum" aria-label="Happy customers">10K+</span>
+            <span class="about-hero__metricLabel">Happy Customers</span>
+          </div>
+          <div class="about-hero__metric">
+            <span class="about-hero__metricNum" aria-label="Premium products">500+</span>
+            <span class="about-hero__metricLabel">Premium Products</span>
+          </div>
+          <div class="about-hero__metric">
+            <span class="about-hero__metricNum" aria-label="Design awards">15+</span>
+            <span class="about-hero__metricLabel">Design Awards</span>
+          </div>
+          <div class="about-hero__metric">
+            <span class="about-hero__metricNum" aria-label="Customer satisfaction">98%</span>
+            <span class="about-hero__metricLabel">Customer Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BRAND STORY — Split image/text
+    ====================================================== -->
+    <section class="about-story" id="aboutStory" aria-label="Brand story">
+      <div class="about-story__inner">
+        <div class="about-story__grid">
+          <div class="about-story__text">
+            <p class="about-story__kicker" data-about-reveal="fade">The NEXORA philosophy</p>
+            <h2 class="about-story__title" data-about-reveal="fade">Craftsmanship with a modern point of view</h2>
+            <p class="about-story__desc" data-about-reveal="fade">
+              NEXORA is inspired by couture-level attention to detail and designed for modern living.
+              We focus on craftsmanship, timeless furniture silhouettes, and premium materials—so every piece
+              performs beautifully today and continues to feel extraordinary for years.
+            </p>
+
+            <div class="about-story__bullets" role="list" aria-label="Brand story highlights" data-about-reveal="fade">
+              <div class="about-story__bullet" role="listitem">
+                <span class="about-story__bulletDot" aria-hidden="true"></span>
+                <span><strong>Craftsmanship</strong> that shows in the joinery.</span>
+              </div>
+              <div class="about-story__bullet" role="listitem">
+                <span class="about-story__bulletDot" aria-hidden="true"></span>
+                <span><strong>Modern design</strong> shaped to feel effortless.</span>
+              </div>
+              <div class="about-story__bullet" role="listitem">
+                <span class="about-story__bulletDot" aria-hidden="true"></span>
+                <span><strong>Timeless furniture</strong> built for everyday rituals.</span>
+              </div>
+              <div class="about-story__bullet" role="listitem">
+                <span class="about-story__bulletDot" aria-hidden="true"></span>
+                <span><strong>Premium materials</strong> chosen for lasting beauty.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-story__media" aria-hidden="true">
+            <div class="about-story__frame"></div>
+            <figure class="about-story__figure">
+              <img class="about-story__img" src="assets/img/Dining-sofa.jpg" alt="" loading="lazy" decoding="async">
+              <figcaption class="about-story__caption">
+                <span class="about-story__captionDot"></span>
+                <span class="about-story__captionLine"></span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MISSION & VISION — Glassmorphism cards
+    ====================================================== -->
+    <section class="about-mv" aria-label="Mission and vision">
+      <div class="about-mv__inner">
+        <header class="about-mv__header">
+          <p class="about-mv__kicker" data-about-reveal="fade">Guiding principles</p>
+          <h2 class="about-mv__title" data-about-reveal="fade">Mission &amp; Vision</h2>
+        </header>
+
+        <div class="about-mv__grid" role="list">
+          <article class="about-mv__card" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-mv__cardTop">
+              <span class="about-mv__cardIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M3 11l9-8 9 8"/>
+                  <path d="M5 10v11h14V10"/>
+                  <path d="M9 21v-7h6v7"/>
+                </svg>
+              </span>
+              <h3 class="about-mv__cardTitle">Mission</h3>
+            </div>
+            <p class="about-mv__cardDesc">
+              To craft luxury modern furniture that elevates everyday living—through meticulous craftsmanship,
+              premium materials, and design that stays relevant.
+            </p>
+          </article>
+
+          <article class="about-mv__card" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-mv__cardTop">
+              <span class="about-mv__cardIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z"/>
+                </svg>
+              </span>
+              <h3 class="about-mv__cardTitle">Vision</h3>
+            </div>
+            <p class="about-mv__cardDesc">
+              To be the most trusted name in premium modern furniture—renowned for timeless silhouettes,
+              sustainable choices, and a customer experience designed like a concierge service.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CORE VALUES — 4 values with custom SVG icons
+    ====================================================== -->
+    <section class="about-values" aria-label="Core values">
+      <div class="about-values__inner">
+        <header class="about-values__header">
+          <p class="about-values__kicker" data-about-reveal="fade">What we stand for</p>
+          <h2 class="about-values__title" data-about-reveal="fade">Core Values</h2>
+        </header>
+
+        <div class="about-values__grid" role="list">
+          <article class="about-values__value" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-values__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 20h16"/>
+                <path d="M6 17l1-10h10l1 10"/>
+                <path d="M9 7l3-3 3 3"/>
+              </svg>
+            </div>
+            <h3 class="about-values__title2">Craftsmanship</h3>
+            <p class="about-values__desc">Precision joinery and refined finishing—built to feel exceptional in every touch.</p>
+          </article>
+
+          <article class="about-values__value" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-values__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 2v6"/>
+                <path d="M7 6h10"/>
+                <path d="M4 12c2-3 5-5 8-5s6 2 8 5"/>
+                <path d="M6 12c1.5 4 4 7 6 10c2-3 4.5-6 6-10"/>
+              </svg>
+            </div>
+            <h3 class="about-values__title2">Sustainability</h3>
+            <p class="about-values__desc">Responsible sourcing and thoughtful production to reduce impact without compromise.</p>
+          </article>
+
+          <article class="about-values__value" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-values__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M3 7h18"/>
+                <path d="M5 7l2 14h10l2-14"/>
+                <path d="M9 11h6"/>
+                <path d="M9 15h6"/>
+              </svg>
+            </div>
+            <h3 class="about-values__title2">Timeless Design</h3>
+            <p class="about-values__desc">Minimal forms with editorial balance—beautiful today, and enduring tomorrow.</p>
+          </article>
+
+          <article class="about-values__value" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-values__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M20 21H4"/>
+                <path d="M7 21V9a5 5 0 0 1 10 0v12"/>
+                <path d="M9 12h6"/>
+              </svg>
+            </div>
+            <h3 class="about-values__title2">Customer Experience</h3>
+            <p class="about-values__desc">Concierge-level support—before, during, and after your purchase.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WHY CHOOSE NEXORA — Premium feature grid
+    ====================================================== -->
+    <section class="about-why" aria-label="Why choose NEXORA">
+      <div class="about-why__inner">
+        <header class="about-why__header">
+          <p class="about-why__kicker" data-about-reveal="fade">Why NEXORA</p>
+          <h2 class="about-why__title" data-about-reveal="fade">Why Choose NEXORA</h2>
+          <p class="about-why__subtitle" data-about-reveal="fade">Premium details designed to feel effortless in your home.</p>
+        </header>
+
+        <div class="about-why__grid" role="list">
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">✦</div>
+            <h3 class="about-why__itemTitle">Premium Materials</h3>
+            <p class="about-why__itemDesc">Refined finishes, durable construction, and surfaces chosen for longevity.</p>
+          </article>
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">⧉</div>
+            <h3 class="about-why__itemTitle">Handmade Quality</h3>
+            <p class="about-why__itemDesc">Skilled artisans craft every seam and line with measurable precision.</p>
+          </article>
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">⟡</div>
+            <h3 class="about-why__itemTitle">Fast Delivery</h3>
+            <p class="about-why__itemDesc">Efficient scheduling and careful handling to get you living sooner.</p>
+          </article>
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">⌁</div>
+            <h3 class="about-why__itemTitle">2-Year Warranty</h3>
+            <p class="about-why__itemDesc">Confidence backed by comprehensive coverage for lasting peace of mind.</p>
+          </article>
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">◈</div>
+            <h3 class="about-why__itemTitle">Curated Collections</h3>
+            <p class="about-why__itemDesc">Thoughtfully designed ranges that balance modern form and timeless function.</p>
+          </article>
+          <article class="about-why__item" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-why__ico" aria-hidden="true">⇢</div>
+            <h3 class="about-why__itemTitle">Modern Design Philosophy</h3>
+            <p class="about-why__itemDesc">Quiet luxury with clean proportions—designed to elevate every room.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         STATISTICS — Animated counters
+    ====================================================== -->
+    <section class="about-stats" aria-label="NEXORA statistics">
+      <div class="about-stats__inner">
+        <div class="about-stats__grid" role="list">
+          <article class="about-stats__stat" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-stats__statIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 18v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5"/>
+                <path d="M4 18h16"/>
+              </svg>
+            </div>
+            <div class="about-stats__statNum" data-counter data-target="10000" aria-label="10,000+ Happy Customers">0</div>
+            <div class="about-stats__statLabel">Happy Customers</div>
+          </article>
+
+          <article class="about-stats__stat" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-stats__statIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M3 16v-3a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"/>
+                <path d="M3 16h18"/>
+              </svg>
+            </div>
+            <div class="about-stats__statNum" data-counter data-target="500" aria-label="500+ Premium Products">0</div>
+            <div class="about-stats__statLabel">Premium Products</div>
+          </article>
+
+          <article class="about-stats__stat" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-stats__statIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/>
+              </svg>
+            </div>
+            <div class="about-stats__statNum" data-counter data-target="15" aria-label="15+ Design Awards">0</div>
+            <div class="about-stats__statLabel">Design Awards</div>
+          </article>
+
+          <article class="about-stats__stat" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-stats__statIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M7 4h10v4a5 5 0 0 1-5 5 5 5 0 0 1-5-5V4z"/>
+                <path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/>
+              </svg>
+            </div>
+            <div class="about-stats__statNum" data-counter data-target="98" aria-label="98% Customer Satisfaction">0</div>
+            <div class="about-stats__statLabel">Customer Satisfaction</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TEAM — Founder / Creative Director / Product Designer
+    ====================================================== -->
+    <section class="about-team" aria-label="Meet the team">
+      <div class="about-team__inner">
+        <header class="about-team__header">
+          <p class="about-team__kicker" data-about-reveal="fade">Leadership</p>
+          <h2 class="about-team__title" data-about-reveal="fade">The Team Behind NEXORA</h2>
+          <p class="about-team__subtitle" data-about-reveal="fade">A curated group of designers dedicated to luxury, clarity, and longevity.</p>
+        </header>
+
+        <div class="about-team__grid" role="list">
+          <article class="about-team__card" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-team__media" aria-hidden="true">
+              <img class="about-team__img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" decoding="async">
+              <div class="about-team__glow"></div>
+            </div>
+            <div class="about-team__body">
+              <div class="about-team__role">Founder</div>
+              <h3 class="about-team__name">Amelia Nexo</h3>
+              <p class="about-team__desc">Guides the brand’s timeless direction—where design restraint meets exceptional craftsmanship.</p>
+              <div class="about-team__line" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="about-team__card" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-team__media" aria-hidden="true">
+              <img class="about-team__img" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" decoding="async">
+              <div class="about-team__glow"></div>
+            </div>
+            <div class="about-team__body">
+              <div class="about-team__role">Creative Director</div>
+              <h3 class="about-team__name">Noah Atelier</h3>
+              <p class="about-team__desc">Shapes the editorial look of every collection—luxury, minimalism, and modern comfort.</p>
+              <div class="about-team__line" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="about-team__card" role="listitem" tabindex="0" data-about-reveal="fade">
+            <div class="about-team__media" aria-hidden="true">
+              <img class="about-team__img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" decoding="async">
+              <div class="about-team__glow"></div>
+            </div>
+            <div class="about-team__body">
+              <div class="about-team__role">Product Designer</div>
+              <h3 class="about-team__name">Sofia Mercer</h3>
+              <p class="about-team__desc">Focuses on materials engineering and dimensional harmony for everyday lasting performance.</p>
+              <div class="about-team__line" aria-hidden="true"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SUSTAINABILITY — Luxury editorial layout with image
+    ====================================================== -->
+    <section class="about-sustain" aria-label="Sustainability">
+      <div class="about-sustain__inner">
+        <div class="about-sustain__grid">
+          <div class="about-sustain__content">
+            <p class="about-sustain__kicker" data-about-reveal="fade">Environmental responsibility</p>
+            <h2 class="about-sustain__title" data-about-reveal="fade">Designed to last—and to care</h2>
+            <div class="about-sustain__list" role="list">
+              <div class="about-sustain__point" role="listitem" tabindex="0" data-about-reveal="fade">
+                <span class="about-sustain__pointIco" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="about-sustain__pointTitle">Sustainable sourcing</h3>
+                  <p class="about-sustain__pointDesc">We prioritize responsible materials that support long-term quality and reduced impact.</p>
+                </div>
+              </div>
+
+              <div class="about-sustain__point" role="listitem" tabindex="0" data-about-reveal="fade">
+                <span class="about-sustain__pointIco" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M3 12l9-9 9 9-9 9-9-9z"/>
+                    <path d="M12 3v18"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="about-sustain__pointTitle">Responsible production</h3>
+                  <p class="about-sustain__pointDesc">Thoughtful processes that respect resources and focus on efficiency without compromise.</p>
+                </div>
+              </div>
+
+              <div class="about-sustain__point" role="listitem" tabindex="0" data-about-reveal="fade">
+                <span class="about-sustain__pointIco" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M4 19c4-1 7-4 8-8 1 4 4 7 8 8"/>
+                    <path d="M12 3v8"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="about-sustain__pointTitle">Long-lasting materials</h3>
+                  <p class="about-sustain__pointDesc">Built for everyday use—so your pieces stay beautiful and functional for years.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-sustain__media" aria-hidden="true">
+            <div class="about-sustain__frame"></div>
+            <figure class="about-sustain__figure">
+              <img class="about-sustain__img" src="assets/img/bedroom-furniture.jpg" alt="" loading="lazy" decoding="async">
+              <figcaption class="about-sustain__figcap">
+                <span class="about-sustain__capDot"></span>
+                <span class="about-sustain__capLine"></span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CUSTOMER TRUST — Testimonials / Star ratings
+    ====================================================== -->
+    <section class="about-trust" aria-label="Customer trust">
+      <div class="about-trust__inner">
+        <header class="about-trust__header">
+          <p class="about-trust__kicker" data-about-reveal="fade">Social proof</p>
+          <h2 class="about-trust__title" data-about-reveal="fade">Trusted by modern homes</h2>
+          <p class="about-trust__subtitle" data-about-reveal="fade">Luxury that feels real—verified buyer feedback.</p>
+        </header>
+
+        <div class="about-trust__grid">
+          <div class="about-trust__summary" data-about-reveal="fade">
+            <div class="about-trust__summaryScore">
+              <span class="about-trust__scoreNum" aria-label="Average rating">4.9</span>
+              <span class="about-trust__scoreStar" aria-hidden="true">/ 5</span>
+            </div>
+
+            <div class="about-trust__stars" aria-label="5 star rating" role="img">
+              <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+              <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+              <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+              <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+              <span class="about-trust__star" aria-hidden="true">★</span>
+            </div>
+
+            <p class="about-trust__summaryText">Average satisfaction across premium product categories.</p>
+
+            <ul class="about-trust__indicators" aria-label="Trust indicators" role="list">
+              <li role="listitem">✓ Secure checkout</li>
+              <li role="listitem">✓ White-glove delivery</li>
+              <li role="listitem">✓ 2-year warranty</li>
+            </ul>
+          </div>
+
+          <div class="about-trust__testimonials" role="list" aria-label="Customer testimonials">
+            <article class="about-trust__tCard" role="listitem" tabindex="0" data-about-reveal="fade">
+              <div class="about-trust__tTop">
+                <div class="about-trust__tPerson">
+                  <div class="about-trust__avatar" aria-hidden="true">S</div>
+                  <div>
+                    <p class="about-trust__tName">Sophie Martinez</p>
+                    <p class="about-trust__tTag">Verified Buyer</p>
+                  </div>
+                </div>
+                <div class="about-trust__tStars" aria-label="5 out of 5 stars" role="img">
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                </div>
+              </div>
+              <p class="about-trust__tText">“The craftsmanship is impeccable. Our sofa looks stunning and feels even better than expected.”</p>
+            </article>
+
+            <article class="about-trust__tCard" role="listitem" tabindex="0" data-about-reveal="fade">
+              <div class="about-trust__tTop">
+                <div class="about-trust__tPerson">
+                  <div class="about-trust__avatar" aria-hidden="true">A</div>
+                  <div>
+                    <p class="about-trust__tName">Adam Thompson</p>
+                    <p class="about-trust__tTag">Verified Buyer</p>
+                  </div>
+                </div>
+                <div class="about-trust__tStars" aria-label="4 out of 5 stars" role="img">
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star" aria-hidden="true">★</span>
+                </div>
+              </div>
+              <p class="about-trust__tText">“Premium materials and clean lines. Delivery was smooth, and the dining table instantly upgraded the room.”</p>
+            </article>
+
+            <article class="about-trust__tCard" role="listitem" tabindex="0" data-about-reveal="fade">
+              <div class="about-trust__tTop">
+                <div class="about-trust__tPerson">
+                  <div class="about-trust__avatar" aria-hidden="true">L</div>
+                  <div>
+                    <p class="about-trust__tName">Leila Haddad</p>
+                    <p class="about-trust__tTag">Verified Buyer</p>
+                  </div>
+                </div>
+                <div class="about-trust__tStars" aria-label="5 out of 5 stars" role="img">
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                  <span class="about-trust__star is-filled" aria-hidden="true">★</span>
+                </div>
+              </div>
+              <p class="about-trust__tText">“The bed frame is sturdy, quiet, and beautifully finished. Everything feels thoughtfully designed.”</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PREMIUM CTA BANNER
+    ====================================================== -->
+    <section class="about-cta" aria-label="Transform your home">
+      <div class="about-cta__inner">
+        <div class="about-cta__card">
+          <div class="about-cta__decor" aria-hidden="true"></div>
+          <h2 class="about-cta__title" data-about-reveal="fade">Transform Your Home With Timeless Design</h2>
+          <p class="about-cta__subtitle" data-about-reveal="fade">Explore furniture crafted to elevate everyday living.</p>
+
+          <div class="about-cta__buttons" data-about-reveal="fade" role="group" aria-label="Call to action">
+            <a href="shop.html" class="about-cta__btn about-cta__btn--primary">Shop Collection</a>
+            <a href="contact.html" class="about-cta__btn about-cta__btn--secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+    <section class="newsletter-section about-newsletter" aria-label="Newsletter">
+      <div class="newsletter-section__inner">
+        <div class="newsletter-section__card">
+          <div class="newsletter-section__decor" aria-hidden="true"></div>
+
+          <p class="newsletter-section__label">STAY INSPIRED</p>
+          <h2 class="newsletter-section__title">Join Our Furniture Community</h2>
+          <p class="newsletter-section__subtitle">Get exclusive offers, new collections, and interior design inspiration delivered to your inbox.</p>
+
+          <form class="newsletter-section__form" action="#" method="post" aria-label="Subscribe to newsletter">
+            <label class="newsletter-section__sr" for="newsletterEmail">Email</label>
+            <div class="newsletter-section__input-wrap">
+              <input
+                id="newsletterEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="Enter your email address"
+                required>
+            </div>
+
+            <button class="newsletter-section__btn" type="submit">
+              <span>Subscribe Now</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </button>
+          </form>
+
+          <p class="newsletter-section__fineprint">By subscribing, you agree to receive emails from NEXORA. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <style>
+    [data-theme-toggle-panel].is-open{ display:block !important; }
+    [data-theme-icon]{ width:20px; height:20px; }
+    [data-theme-icon].is-active{ display:block !important; }
+    [data-theme-icon]{ display:none; }
+  </style>
+
+  <!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="assets/js/script.js"></script>
+
+  <!-- Back To Top Button -->
+<button
+    id="scrollToTopBtn"
+    class="scrollToTopBtn"
+    aria-label="Back to Top"
+    title="Back to Top">
+
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+</body>
+</html>

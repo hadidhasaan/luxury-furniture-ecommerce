@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <script>(function(){try{if(localStorage.getItem("nexora-theme")==="dark"){document.documentElement.classList.add("theme-dark");}}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXORA — Contact Us</title>
+  <meta name="description" content="NEXORA — Contact Us. Reach our concierge team for product questions, delivery support, and partnership inquiries."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/search.css"/>
+  <link rel="stylesheet" href="assets/css/contact-style.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ATELIER BAR — signature announcement strip
+  ====================================================== -->
+  <div class="atelier-bar" id="atelierBar">
+    <div class="atelier-track" id="atelierTrack">
+      <span class="atelier-msg is-active">Complimentary white-glove delivery on every order over $1,200</span>
+      <span class="atelier-msg">New Atelier Edition — limited run, now live</span>
+      <span class="atelier-msg">Designed for modern living. Made to outlast trend.</span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       PREMIUM NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <!-- Mobile menu trigger -->
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+<!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true"></span>
+  <span class="logo-sub" aria-hidden="true">Modern Furniture</span>
+</a>
+
+      <!-- Primary nav -->
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html" class="nav-link" data-nav>Home</a>
+        <a href="shop.html" class="nav-link" data-nav>Shop</a>
+        <a href="collections.html" class="nav-link" data-nav>Collections</a>
+        <a href="journal.html" class="nav-link" data-nav>Journal</a>
+        <a href="about.html" class="nav-link" data-nav>About</a>
+        <a href="contact.html" class="nav-link" data-nav>Contact</a>
+
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+
+      <!-- Utility icons -->
+      <div class="nav-utility">
+
+        <!-- Search -->
+        <!-- search start -->
+      <div class="nav-search" id="navSearch">
+      <button class="nav-icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+        </svg>
+      </button>
+    </div>
+
+     <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="searchOverlayTitle">
+    <div class="search-overlay__scrim" data-search-scrim></div>
+
+    <div class="search-overlay__panel">
+      <div class="search-overlay__top">
+        <h2 class="search-overlay__title" id="searchOverlayTitle">Search the catalogue</h2>
+        <button class="search-overlay__close" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--
+        data-search-target is ROOT-RELATIVE on purpose.
+        Whether this page lives at /index.html or
+        /collections/outdoor/lounge-chairs.html, the
+        redirect always resolves to the same place.
+        Change it once here to match your real shop URL.
+      -->
+      <form id="searchOverlayForm" class="search-overlay__form" data-search-target="/shop.html">
+        <label class="search-overlay__label" for="searchOverlayInput">Search products</label>
+        <div class="search-overlay__field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="20" y1="20" x2="15.3" y2="15.3"/>
+          </svg>
+          <input type="text" id="searchOverlayInput" name="search" placeholder="Search sofas, dining tables, lighting…" autocomplete="off">
+          <button type="submit" class="search-overlay__submit" aria-label="Submit search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-overlay__chips">
+          <button type="button" class="search-overlay__chip" data-search-chip>Sofas</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Dining tables</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Lighting</button>
+          <button type="button" class="search-overlay__chip" data-search-chip>Outdoor</button>
+        </div>
+      </form>
+
+      <div class="search-overlay__bottom">
+        <p class="search-overlay__fine">Press <kbd>Esc</kbd> to close</p>
+       
+      </div>
+    </div>
+  </div>
+    <!-- search end -->
+
+        <!-- Account -->
+        <button class="nav-icon-btn nav-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.4"/>
+            <path d="M4.5 20c1.6-3.6 4.6-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="nav-icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20.2s-7.6-4.6-10-9.3C.4 7.3 2.3 4 5.7 4c2 0 3.6 1.1 4.5 2.7C11.1 5.1 12.7 4 14.7 4c3.4 0 5.3 3.3 3.7 6.9-2.4 4.7-10 9.3-10 9.3z"/>
+          </svg>
+          <span class="nav-count" id="wishlistCount">0</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="cart.html" class="nav-icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6.5 8h11l1 12.5h-13L6.5 8z"/>
+            <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+          </svg>
+          <span class="nav-count nav-count--accent" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile slide-in menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu-links" aria-label="Mobile primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-tagline">Designed for Modern Living</p>
+      </div>
+    </div>
+    <div class="mobile-menu-scrim" id="mobileScrim"></div>
+  </header>
+
+  <main id="main" class="contact-root" aria-label="Contact page">
+
+    <!-- =====================================================
+         Contact Hero
+    ====================================================== -->
+    <section class="contact-hero" id="contactHero" aria-label="Contact NEXORA introduction">
+      <div class="contact-hero__inner">
+        <div class="contact-hero__content" data-reveal="fade">
+          <p class="contact-hero__kicker">Concierge Support</p>
+          <h1 class="contact-hero__title">
+            Reach NEXORA
+            <span class="contact-hero__gold">with confidence</span>
+          </h1>
+          <p class="contact-hero__subtitle">
+            Questions about products, delivery scheduling, or custom styling? Our team is here to help—quickly, thoughtfully, and with premium care.
+          </p>
+
+          <div class="contact-hero__meta" role="list" aria-label="Contact highlights">
+            <div class="contact-hero__metaItem" role="listitem">
+              <span class="contact-hero__metaIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 4h16v16H4z"/>
+                  <path d="M7 7h10"/>
+                  <path d="M7 12h6"/>
+                  <path d="M7 17h8"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Fast replies</strong>
+                <em>Typically within 24–48 hours</em>
+              </span>
+            </div>
+            <div class="contact-hero__metaItem" role="listitem">
+              <span class="contact-hero__metaIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M3 7h18"/>
+                  <path d="M5 7l2 14h10l2-14"/>
+                  <path d="M9 11h6"/>
+                  <path d="M10 17h4"/>
+                </svg>
+              </span>
+              <span>
+                <strong>White-glove care</strong>
+                <em>Delivery &amp; support guidance</em>
+              </span>
+            </div>
+            <div class="contact-hero__metaItem" role="listitem">
+              <span class="contact-hero__metaIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Premium solutions</strong>
+                <em>Styling &amp; product help</em>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hero__media" aria-hidden="true" data-reveal="fade">
+          <div class="contact-hero__frame"></div>
+          <img class="contact-hero__img" src="assets/img/sofa-set.jpg" alt="" loading="eager" decoding="async"/>
+          <div class="contact-hero__overlay"></div>
+          <div class="contact-hero__stat" role="group" aria-label="Response time"> 
+            <div class="contact-hero__statNum">24–48</div>
+            <div class="contact-hero__statLabel">Hours avg response</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Contact Information Cards
+    ====================================================== -->
+    <section class="contact-info" id="contactInfo" aria-label="Contact information">
+      <div class="contact-info__inner">
+        <header class="contact-sectionHeader" data-reveal="fade">
+          <p class="contact-sectionHeader__kicker">Get in touch</p>
+          <h2 class="contact-sectionHeader__title">Direct lines to our team</h2>
+          <p class="contact-sectionHeader__subtitle">Choose the channel that fits your question best.</p>
+        </header>
+
+        <div class="contact-info__grid" role="list">
+          <article class="contact-infoCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="contact-infoCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 4h16v16H4z"/>
+                <path d="M4 8l8 6 8-6"/>
+              </svg>
+            </span>
+            <h3 class="contact-infoCard__title">Email</h3>
+            <p class="contact-infoCard__value">
+              <a href="mailto:hello@nexora.com" class="contact-infoCard__link">hello@nexora.com</a>
+            </p>
+            <p class="contact-infoCard__hint">Product questions, custom requests</p>
+          </article>
+
+          <article class="contact-infoCard" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="contact-infoCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 4h6l2 5-3 2c1 2 3 4 5 5l2-3 5 2v6c-9 0-17-8-17-17z"/>
+              </svg>
+            </span>
+            <h3 class="contact-infoCard__title">Phone</h3>
+            <p class="contact-infoCard__value">
+              <a href="#" class="contact-infoCard__link">+1 (000) 000-0000</a>
+            </p>
+            <p class="contact-infoCard__hint">Delivery scheduling &amp; urgent support</p>
+          </article>
+
+          <article class="contact-infoCard contact-infoCard--wide" role="listitem" tabindex="0" data-reveal="fade">
+            <span class="contact-infoCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 22s7-4.5 7-12a7 7 0 0 0-14 0c0 7.5 7 12 7 12z"/>
+                <path d="M12 10.5a2.2 2.2 0 1 0 0-4.4a2.2 2.2 0 0 0 0 4.4z"/>
+              </svg>
+            </span>
+            <h3 class="contact-infoCard__title">Address</h3>
+            <p class="contact-infoCard__value">123 Atelier Avenue, Suite 10</p>
+            <p class="contact-infoCard__hint">Appointments available by request</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Contact Form
+    ====================================================== -->
+    <section class="contact-form" id="contactForm" aria-label="Contact form">
+      <div class="contact-form__inner">
+        <div class="contact-form__grid">
+          <div>
+            <header class="contact-sectionHeader contact-sectionHeader--left" data-reveal="fade">
+              <p class="contact-sectionHeader__kicker">Send a message</p>
+              <h2 class="contact-sectionHeader__title">We’ll respond with care</h2>
+              <p class="contact-sectionHeader__subtitle">Fill in the details below—our concierge will reach out as soon as possible.</p>
+            </header>
+
+            <div class="contact-form__note" role="status" aria-live="polite" aria-atomic="true" id="contactFormStatus" hidden>
+              <span class="contact-form__noteIcon" aria-hidden="true">✦</span>
+              <span class="contact-form__noteText" id="contactFormStatusText">Message received.</span>
+            </div>
+          </div>
+
+          <form class="contact-form__card" id="contactFormEl" action="#" method="post" novalidate aria-label="Contact form" data-reveal="fade">
+            <div class="contact-form__row">
+              <label class="contact-field" for="contactName">
+                <span class="contact-field__label">Name</span>
+                <input class="contact-field__input" type="text" id="contactName" name="name" autocomplete="name" required placeholder="Your full name"/>
+              </label>
+              <label class="contact-field" for="contactEmail">
+                <span class="contact-field__label">Email</span>
+                <input class="contact-field__input" type="email" id="contactEmail" name="email" autocomplete="email" required placeholder="you@domain.com"/>
+              </label>
+            </div>
+
+            <label class="contact-field" for="contactSubject">
+              <span class="contact-field__label">Subject</span>
+              <input class="contact-field__input" type="text" id="contactSubject" name="subject" required placeholder="How can we help?"/>
+            </label>
+
+            <label class="contact-field" for="contactMessage">
+              <span class="contact-field__label">Message</span>
+              <textarea class="contact-field__textarea" id="contactMessage" name="message" rows="6" required placeholder="Tell us what you’re looking for…"></textarea>
+            </label>
+
+            <div class="contact-form__actions">
+              <button class="contact-form__btn contact-form__btn--primary" type="submit">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6"/>
+                </svg>
+              </button>
+              <button class="contact-form__btn contact-form__btn--ghost" type="button" id="contactFormClear">
+                <span>Clear</span>
+              </button>
+            </div>
+
+            <p class="contact-form__fineprint">By sending this message, you agree to be contacted by NEXORA regarding your inquiry.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+    <section class="contact-faq" id="contactFaq" aria-label="Frequently asked questions">
+      <div class="contact-faq__inner">
+        <header class="contact-sectionHeader" data-reveal="fade">
+          <p class="contact-sectionHeader__kicker">FAQ</p>
+          <h2 class="contact-sectionHeader__title">Answers, elegantly presented</h2>
+          <p class="contact-sectionHeader__subtitle">If you don’t see your question, send us a message above.</p>
+        </header>
+
+        <div class="contact-faq__grid" role="list">
+          <div class="contact-faq__acc" role="listitem">
+            <div class="contact-accordion" data-accordion data-reveal="fade">
+              <h3 class="contact-accordion__question">
+                <button class="contact-accordion__btn" type="button" aria-expanded="false" aria-controls="faqPanel1" id="faqBtn1">
+                  How quickly will I hear back?
+                  <span class="contact-accordion__chev" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="contact-accordion__panel" id="faqPanel1" role="region" aria-labelledby="faqBtn1" hidden>
+                <p class="contact-accordion__text">
+                  We typically respond within <strong>24–48 hours</strong> during business days. For urgent delivery issues, phone support is recommended.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-accordion" data-accordion data-reveal="fade">
+              <h3 class="contact-accordion__question">
+                <button class="contact-accordion__btn" type="button" aria-expanded="false" aria-controls="faqPanel2" id="faqBtn2">
+                  Can I request custom styling or materials?
+                  <span class="contact-accordion__chev" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="contact-accordion__panel" id="faqPanel2" role="region" aria-labelledby="faqBtn2" hidden>
+                <p class="contact-accordion__text">
+                  Yes. Send your style preferences and any constraints (space, color direction, finish). Our team will guide you to premium options that match your space.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-accordion" data-accordion data-reveal="fade">
+              <h3 class="contact-accordion__question">
+                <button class="contact-accordion__btn" type="button" aria-expanded="false" aria-controls="faqPanel3" id="faqBtn3">
+                  Do you offer delivery scheduling help?
+                  <span class="contact-accordion__chev" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="contact-accordion__panel" id="faqPanel3" role="region" aria-labelledby="faqBtn3" hidden>
+                <p class="contact-accordion__text">
+                  Absolutely. Share your order number (if applicable) and your preferred delivery window. We’ll coordinate with our white-glove delivery partners.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-accordion" data-accordion data-reveal="fade">
+              <h3 class="contact-accordion__question">
+                <button class="contact-accordion__btn" type="button" aria-expanded="false" aria-controls="faqPanel4" id="faqBtn4">
+                  What if my question is about returns or warranty?
+                  <span class="contact-accordion__chev" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="contact-accordion__panel" id="faqPanel4" role="region" aria-labelledby="faqBtn4" hidden>
+                <p class="contact-accordion__text">
+                  Contact us with your order details and we’ll route your request to the right concierge specialist. Warranty inquiries are handled with priority.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Premium CTA Section
+    ====================================================== -->
+    <section class="contact-cta" id="contactCTA" aria-label="Contact call to action">
+      <div class="contact-cta__inner">
+        <div class="contact-cta__card" role="region" aria-label="Let’s plan your next space" data-reveal="fade">
+          <div class="contact-cta__decor" aria-hidden="true"></div>
+          <p class="contact-cta__kicker">NEXORA Atelier</p>
+          <h2 class="contact-cta__title">Let’s design your next chapter</h2>
+          <p class="contact-cta__subtitle">Talk to our concierge for product guidance, delivery support, and premium styling recommendations.</p>
+
+          <div class="contact-cta__buttons">
+            <a href="shop.html" class="contact-cta__btn contact-cta__btn--primary">Explore Collection</a>
+            <a href="#contactForm" class="contact-cta__btn contact-cta__btn--secondary">Message the Concierge</a>
+          </div>
+
+          <div class="contact-cta__trust" aria-label="Trust notes">
+            <span class="contact-cta__trustItem">✦ Premium support</span>
+            <span class="contact-cta__trustItem">✦ White-glove care</span>
+            <span class="contact-cta__trustItem">✦ 2-year warranty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <!-- FOOTER -->
+<footer class="footer-section" aria-label="Footer">
+  <div class="footer-section__inner">
+
+    <div class="footer-section__topGrid">
+      <div class="footer-section__col" data-reveal="fade">
+        <!-- Logo -->
+<a href="index.html" class="nav-logo" aria-label="NEXORA — Modern Furniture, home">
+  <span class="logo-text" aria-hidden="true" style="color:white;">NEX<span class="logo-o">O</span>RA</span>
+  <span class="logo-rule" aria-hidden="true" style="color:white;"></span>
+  <span class="logo-sub" aria-hidden="true" style="color:white;">Modern Furniture</span>
+</a>
+        <p class="footer-section__desc">Premium furniture crafted for modern living spaces.</p>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Quick Links</p>
+        <nav class="footer-section__links" aria-label="Quick Links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="journal.html">Journal</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Customer Support</p>
+        <nav class="footer-section__links" aria-label="Customer Support">
+          <a href="contact.html">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </nav>
+      </div>
+
+      <div class="footer-section__col" data-reveal="fade">
+        <p class="footer-section__heading">Contact Info</p>
+        <ul class="footer-section__contact" aria-label="Contact Information">
+          <li><span class="footer-section__contactLabel">Email:</span> <a href="mailto:hello@nexora.com">hello@nexora.com</a></li>
+          <li><span class="footer-section__contactLabel">Phone:</span> <a href="#">+1 (000) 000-0000</a></li>
+          <li><span class="footer-section__contactLabel">Address:</span> <span>123 Atelier Avenue, Suite 10</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section__bottom">
+      <div class="footer-section__bottomLeft">© 2026 Your Brand. All rights reserved.</div>
+
+      <div class="footer-section__bottomRight">
+        <div class="footer-section__legalLinks" aria-label="Legal Links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-section__sep">|</span>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-section__social" aria-label="Social Links">
+          <a href="#" class="footer-section__socialBtn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M14.5 9.5h.01"/>
+              <path d="M12 11a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+              <path d="M9 6H15"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M22 5.9c-.8.4-1.7.6-2.6.8c.9-.5 1.6-1.4 2-2.4c-.9.5-1.9.9-3 .9c-1.6-1.7-4.6-1.1-5.5 1c-.3.7-.3 1.5-.1 2.2c-3.6-.2-6.8-2-8.9-5c-1.2 2.1-.6 4.9 1.3 6.3c-.7 0-1.4-.2-2-.5c0 2.4 1.7 4.6 4.2 5.1c-.6.2-1.3.2-2 .1c.6 2.1 2.6 3.6 4.9 3.6C7 21.5 4.8 22.2 3 22c2.4 1.5 5.2 2.3 8.1 2.3c9.7 0 15.1-8.4 14.8-15.9c1-.7 1.8-1.6 2.1-2.6Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-section__socialBtn" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M8.5 21c2.8-1.1 3-4.1 3-4.1l.2-.9"/>
+              <path d="M12.1 18.1c-1 3.8-4.3 3.7-5.8 2.4c-1.8-1.6-1.1-4.8-.2-7.1c.9-2.1 3-4 5.6-4.1c2.9-.1 5.2 1.7 5.3 4.6c.1 2.7-1.3 6.3-4.2 6.3c-1.4 0-2-1-1.7-2.3l.7-2.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/contact.js"></script>
+
+  <!-- Back To Top Button -->
+<button
+    id="scrollToTopBtn"
+    class="scrollToTopBtn"
+    aria-label="Back to Top"
+    title="Back to Top">
+
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+</body>
+</html>
